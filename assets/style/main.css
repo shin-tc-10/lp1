@@ -1,0 +1,55 @@
+
+body {
+    height: 5476px;
+    width: 375px;
+    margin: 0 auto;
+}
+
+header {
+    height: 70px;
+    width: 375px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* 右方向に影 */
+}
+
+header h1 {
+    display: inline-block;
+    color: #005BAC;
+    width: 166px;
+    height: 34px;
+    font-size: 1.2rem;
+    margin: 18px 193px 0 16px;
+}
+
+main {
+
+}
+
+.action {
+    height: 168px;
+    width: 250px;
+    margin: 24px 62px 0 63px;
+}
+
+.action button {
+    width: 250px;
+    height: 48px;
+    color: #FFFFFF;
+    border-radius: 25px;
+    border: none;
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.action__button--contact {
+    background-color: #77CB33;
+}
+
+.action__button--application {
+    background-color: #F6AA00;
+    margin: 12px 0;
+}
+
+.action__button--request {
+    background-color: #3AC8AD;
+}
