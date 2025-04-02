@@ -1,4 +1,29 @@
+@charset "UTF-8";
 
+/* ベースのスタイル
+------------------------------------------ */
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    line-height: 1.75;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+li {
+    list-style: none;
+}
+
+/* ベースのスタイル
+------------------------------------------ */
 body {
     height: 5476px;
     width: 375px;
@@ -20,23 +45,26 @@ header h1 {
     margin: 18px 193px 0 16px;
 }
 
+/* ベースのスタイル
+------------------------------------------ */
 main {
 
 }
 
+/* ベースのスタイル
+------------------------------------------ */
 .action {
     height: 168px;
     width: 250px;
-    margin: 24px 62px 0 63px;
+    margin: 24px 62px 24px 63px;
 }
 
 .action button {
-    width: 250px;
     height: 48px;
+    width: 100%;
     color: #FFFFFF;
     border-radius: 25px;
     border: none;
-    font-family: 'Noto Sans Japanese', sans-serif;
     font-weight: bold;
     font-size: 1rem;
 }
@@ -52,4 +80,66 @@ main {
 
 .action__button--request {
     background-color: #3AC8AD;
+}
+
+/* ベースのスタイル
+------------------------------------------ */
+.application {
+    background-color: rgb(255, 85, 85, 10%);
+    padding: 40px 16px;
+    margin: 0 0 64px 0;
+}
+
+.application__content {
+    width: 343px;
+    /* height: 133px; */
+    text-align: center;
+}
+
+.application__button {
+    width: 305px;
+    height: 69px;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 35px;
+    background: linear-gradient(to bottom, rgb(2, 113, 224), rgb(50, 150, 250));
+}
+
+.choose__tabs {
+    display: flex;
+}
+
+.choose__tab--by-grade-level {
+    margin: 0 15px 0 16px;
+}
+
+.choose__tab--by-purpose {
+    margin: 0 16px 0 0;
+}
+
+.choose__tab {
+    background-color: #F0F0F0;
+    height: 66px;
+    width:164px;
+    padding: 20px 19px;
+    border-radius: 12px 12px 0 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.choose__tab--active {
+    background-color: #F2F9FF;
+    color: #333333;
+}
+
+.choose__content {
+    display: none;
+}
+
+.choose__content--active {
+    display: block;
+}
+
+.application--last {
+    margin: 0 0 0 0;
 }
