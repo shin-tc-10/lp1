@@ -36,16 +36,15 @@ header {
   width: 375px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* 右方向に影 */
   color: #005bac;
-  height: 34px;
+  height: 70px;
   font-size: 1.2rem;
-  margin: 18px 0 0 16px;
 }
 
 header h1 {
   display: inline-block;
   color: #005bac;
   height: 34px;
-  font-size: 1.2rem;
+  font-size: 2.2rem;
   margin: 18px 0 0 16px;
 }
 
@@ -127,7 +126,7 @@ header h1 {
   border-radius: 25px;
   border: none;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 
 .action__button--contact {
@@ -159,26 +158,76 @@ header h1 {
 
 .application__content {
   width: 343px;
-  /* height: 133px; */
   text-align: center;
+}
+
+.application__content p {
+  font-size: 1.6rem;
 }
 
 .application__button {
   width: 305px;
   height: 69px;
+  font-size: 2rem;
 }
 
-/* 選べる３つの理由エリア */
+/* 選ばれる３つの理由 */
+.reason {
+  padding: 16px;
+}
+
+.reason__contents h2 {
+  font-size: 2.8rem;
+  text-align: center;
+}
+
+.reason--three-txt {
+  font-size: 40px;
+  color: #f11f8d;
+  font-weight: bold;
+}
+
+.reason__content {
+  margin: 0 0 36px 0;
+}
+
+.reason__content h3 {
+  font-size: 2rem;
+}
+
+.reason__content p {
+  font-size: 1.6rem;
+}
+
+/* コース・目的エリア  */
+.choose h2 {
+  text-align: center;
+  font-size: 2.8rem;
+}
+.choose__contents {
+  width: 100%;
+  padding: 16px;
+}
+
+.choose__content {
+  background: #f2f9ff;
+}
+
+.choose__content p {
+  font-size: 2rem;
+}
+
 .choose__tabs {
   display: flex;
 }
 
 .choose__tab--by-grade-level {
-  margin: 0 15px 0 16px;
+  margin: 0 15px 0 0;
+  font-size: 1.8rem;
 }
 
 .choose__tab--by-purpose {
-  margin: 0 16px 0 0;
+  font-size: 1.8rem;
 }
 
 .choose__tab {
@@ -204,28 +253,59 @@ header h1 {
   display: block;
 }
 
+.choose__content--select {
+  display: flex;
+  margin: 12px 0 0 0;
+}
+
+.choose__content--image {
+  display: flex;
+  margin: 0 8.2px 0 0;
+  align-items: center;
+}
+
+.choose__content--image-select {
+  margin: 0 0 69px 0;
+}
+
 /* 費用エリアのスタイル */
+.cost h2 {
+  font-size: 2.8rem;
+  text-align: center;
+}
+
 .cost__table {
   border-spacing: 0; /* セル間の隙間をなくす */
   border-collapse: collapse; /* セルの境界線を重ねて表示する */
   border: 1px solid #cccccc;
   width: 100%;
-  margin: 0 16px 64px 16px;
-}
-
-.cost__table th {
-  background-color: #f5f5f5;
+  font-size: 1.6rem;
+  text-align: center;
 }
 
 .cost__table td {
   border: 1px solid #cccccc;
+  padding: 10px;
+}
+
+.cost__table--head {
+  background-color: #f5f5f5;
+}
+
+.cost__table--right-td {
+  font-size: 2.8rem;
+  color: #f23397;
+  font-weight: bold;
 }
 
 /* フッターのスタイル */
 footer {
+  display: flex;
   height: 83px;
   background-color: #dddddd;
   font-size: 1.3rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .application--last {
@@ -239,12 +319,30 @@ footer {
     scroll-behavior: smooth;
   }
 
+  body {
+    width: 1200px;
+    font-size: 1.6rem;
+  }
+
+  header {
+    width: 100%;
+    height: 101px;
+  }
+
   header h1 {
     display: inline-block;
     color: #005bac;
-    height: 34px;
-    font-size: 1.2rem;
-    margin: 28px 158px 28px 380px;
+    height: 45px;
+    font-size: 3.2rem;
+    margin: 28px 158px 28px 28px;
+  }
+
+  .pc-nav {
+    display: block;
+  }
+
+  .hamburger span {
+    display: none;
   }
 
   .image__container {
