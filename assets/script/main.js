@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    $('.hamburger').click(function () {
+        $('.sp-nav').toggleClass('active');
+    });
+
     $('.choose__tab').click(function () {
         let tabId = $(this).attr('id');
 

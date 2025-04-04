@@ -3,143 +3,282 @@
 /* ベースのスタイル
 ------------------------------------------ */
 body {
-    font-family: "Noto Sans JP", sans-serif;
-    line-height: 1.75;
-    color: #333;
+font-family: "Noto Sans JP", sans-serif;
+line-height: 1.75;
+color: #333;
 }
 
 a {
-    text-decoration: none;
+text-decoration: none;
+color: #333;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: bottom;
+max-width: 100%;
+height: auto;
+vertical-align: bottom;
 }
 
 li {
-    list-style: none;
+list-style: none;
 }
 
-/* ベースのスタイル
------------------------------------------- */
-body {
-    height: 5476px;
-    width: 375px;
-    margin: 0 auto;
-}
+
+
 
 header {
-    height: 70px;
-    width: 375px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* 右方向に影 */
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 
 header h1 {
-    display: inline-block;
-    color: #005BAC;
-    width: 166px;
-    height: 34px;
-    font-size: 1.2rem;
-    margin: 18px 193px 0 16px;
+color: #005BAC;
 }
 
-/* ベースのスタイル
------------------------------------------- */
-main {
+.cost__table {
+    border-spacing: 0;  /* セル間の隙間をなくす */
+border-collapse: collapse;  /* セルの境界線を重ねて表示する */
+border: 1px solid #CCCCCC;
+width: 100%;
+margin: 0 16px 64px 16px; 
 
 }
 
-/* ベースのスタイル
------------------------------------------- */
-.action {
-    height: 168px;
-    width: 250px;
-    margin: 24px 62px 24px 63px;
+.cost__table th {
+background-color: #F5F5F5;
 }
 
-.action button {
-    height: 48px;
-    width: 100%;
-    color: #FFFFFF;
-    border-radius: 25px;
-    border: none;
-    font-weight: bold;
-    font-size: 1rem;
+.cost__table td {
+border: 1px solid #CCCCCC;
+}
+    
+
+.hamburger {
+display: none; /* デフォルトでは非表示 */
+flex-direction: column;
+justify-content: space-between;
+width: 30px;
+height: 20px;
+cursor: pointer;
 }
 
-.action__button--contact {
-    background-color: #77CB33;
+.hamburger span {
+display: block;
+height: 2px;
+background-color: #333;
 }
 
-.action__button--application {
-    background-color: #F6AA00;
-    margin: 12px 0;
+.sp-nav {
+display: none; /* デフォルトでは非表示 */
+position: absolute;
+top: 60px; /* ヘッダーの高さに合わせて調整 */
+right: 0;
+background-color: #f0f0f0;
+width: 200px;
+padding: 20px;
 }
 
-.action__button--request {
-    background-color: #3AC8AD;
+.sp-nav ul {
+list-style: none;
+padding: 0;
+margin: 0;
 }
 
-/* ベースのスタイル
------------------------------------------- */
-.application {
-    background-color: rgb(255, 85, 85, 10%);
-    padding: 40px 16px;
-    margin: 0 0 64px 0;
+.sp-nav li {
+margin-bottom: 10px;
 }
 
-.application__content {
-    width: 343px;
-    /* height: 133px; */
-    text-align: center;
+
+
+.sp-nav.active {
+display: block; /* メニュー表示時のスタイル */
 }
 
 .application__button {
-    width: 305px;
-    height: 69px;
     color: #FFFFFF;
     border: none;
     border-radius: 35px;
     background: linear-gradient(to bottom, rgb(2, 113, 224), rgb(50, 150, 250));
+    }
+    
+
+
+/* スマホ表示
+-------------------------------------- */
+@media (max-width: 768px) {
+
+body {
+/* height: 5476px; */
+width: 375px;
+margin: 0 auto;
+}
+
+header {
+height: 70px;
+width: 375px;
+box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* 右方向に影 */
+}
+
+header h1 {
+display: inline-block;
+color: #005BAC;
+height: 34px;
+font-size: 1.2rem;
+margin: 18px 0 0 16px;
+}
+
+footer {
+    height: 83px;
+    background-color: #DDDDDD;
+    font-size: 1.3rem;
+}
+
+.action {
+height: 168px;
+width: 250px;
+margin: 24px 62px 24px 63px;
+}
+
+.action button {
+height: 48px;
+width: 100%;
+color: #FFFFFF;
+border-radius: 25px;
+border: none;
+font-weight: bold;
+font-size: 1rem;
+}
+
+.action__button--contact {
+background-color: #77CB33;
+}
+
+.action__button--application {
+background-color: #F6AA00;
+margin: 12px 0;
+}
+
+.action__button--request {
+background-color: #3AC8AD;
+}
+
+.application {
+background-color: rgb(255, 85, 85, 10%);
+padding: 40px 16px;
+margin: 0 0 64px 0;
+}
+
+.application__content {
+width: 343px;
+/* height: 133px; */
+text-align: center;
+}
+
+.application__button {
+width: 305px;
+height: 69px;
 }
 
 .choose__tabs {
-    display: flex;
+display: flex;
 }
 
 .choose__tab--by-grade-level {
-    margin: 0 15px 0 16px;
+margin: 0 15px 0 16px;
 }
 
 .choose__tab--by-purpose {
-    margin: 0 16px 0 0;
+margin: 0 16px 0 0;
 }
 
 .choose__tab {
-    background-color: #F0F0F0;
-    height: 66px;
-    width:164px;
-    padding: 20px 19px;
-    border-radius: 12px 12px 0 0;
-    cursor: pointer;
-    font-weight: bold;
+background-color: #F0F0F0;
+height: 66px;
+width:164px;
+padding: 20px 19px;
+border-radius: 12px 12px 0 0;
+cursor: pointer;
+font-weight: bold;
 }
 
 .choose__tab--active {
-    background-color: #F2F9FF;
-    color: #333333;
+background-color: #F2F9FF;
+color: #333333;
 }
 
 .choose__content {
-    display: none;
+display: none;
 }
 
 .choose__content--active {
-    display: block;
+display: block;
 }
 
 .application--last {
-    margin: 0 0 0 0;
+margin: 0 0 0 0;
+}
+
+
+.pc-nav {
+display: none;
+}
+
+.hamburger {
+display: flex;
+}
+.sp-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: -200px; /* 初期位置を右にずらす */
+    background-color: #f0f0f0;
+    width: 200px;
+    padding: 20px;
+    transition: right 0.3s ease-in-out; /* アニメーションを追加 */
+  }
+  
+  .sp-nav.active {
+    display: block;
+    right: 0; /* 右からスライドして表示 */
+  }
+}
+
+/* PCサイズ */
+@media (min-width: 769px) {
+html {
+scroll-behavior: smooth;
+}
+
+header h1 {
+display: inline-block;
+color: #005BAC;
+height: 34px;
+font-size: 1.2rem;
+margin: 28px 158px 28px 380px;
+}
+
+.image__container {
+display: inline-block;
+overflow: hidden; /* 拡大した部分がはみ出さないように */
+}
+
+.image--zoom {
+transition: transform 0.3s ease; /* 拡大時のアニメーション */
+width: 100%; /* 画像がコンテナにぴったり収まるように */
+}
+
+.image__container:hover .image--zoom {
+transform: scale(1.2); /* 1.2倍に拡大 */
+}
+
+.pc-nav__ul {
+display: flex;
+justify-content: space-around;
+}
+
+.application__button {
+    width: 282px;
+    height: 61px;
+    }
 }

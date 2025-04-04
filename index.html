@@ -11,7 +11,7 @@
     <meta property="og:description" content="難関大学の合格実績No.1のKira-Kira Jukuが、現役高校生・高卒生向け入学説明会の申し込みを開始しました。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="/lp1/index.html">
-    <meta property="og:image" content="/assets/image/mv_ogp_01.jpg">
+    <meta property="og:images" content="/assets/images/mv_ogp_01.jpg">
     <meta property="og:site_name" content="Kira-Kira Juku">
     <link rel="stylesheet" href="/assets/style/main.css">
     <!-- reset.css destyle -->
@@ -27,23 +27,39 @@
         <h1>
             Kira-Kira Juku
         </h1>
-        <nav>
-            <ul></ul>
-            <ul></ul>
-            <ul></ul>
+        <nav class="pc-nav">
+            <ul class="pc-nav__ul">
+                <li><a href="#">選ばれる3つの理由</a></li>
+                <li><a href="#">コース・目的</a></li>
+                <li><a href="#">費 用</a></li>
+                <div class="application__content">
+                    <button class="application__button">入学説明会に申し込む</button>
+                </div>
+            </ul>
+
+        </nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="sp-nav">
+            <ul>
+                <li><a href="#">選ばれる3つの理由</a></li>
+                <li><a href="#">コース・目的</a></li>
+                <li><a href="#">費 用</a></li>
+            </ul>
+            <div class="application__content">
+                <button class="application__button">入学説明会に申し込む</button>
+            </div>
         </nav>
     </header>
     <main class="main">
         <section class="mv">
-            <img src="/assets/image/mv_top_01.jpg" alt="入学説明会のお申し込み開始のイメージ画像">
-
-
             <picture>
-                <!-- <source media="(min-width: 768px)" srcset="/images/cover/cover_pc_1.png">
-                <img class="cover-image" src="/images/cover/cover_sp_1.png" alt=""> -->
+                <source media="(min-width: 768px)" srcset="/assets/images/mv_01_pc.jpg">
+                <img class="cover-images" src="/assets/images/mv_01_sp.jpg" alt="入学説明会のお申し込み開始のイメージ画像">
             </picture>
-
-
         </section>
         <section class="action">
             <div class="action__buttons">
@@ -52,12 +68,12 @@
                 <button class="action__button--request">資料請求する</button>
             </div>
         </section>
-        <section class="reason">
+        <section class="reason" id="reason">
             <div class="reason__contents">
                 <h2>選ばれる3つの理由</h2>
                 <div class="reason__content--point1">
-                    <img src="/assets/image/three_reason_point_1_01.jpg" alt="選ばれる3つの理由 ポイント1のイメージ画像">
-                    <img src="/assets/image/three_reason_point_1_02.png" alt="選ばれる3つの理由 ポイント1のロゴ">
+                    <img src="/assets/images/three_reason_point_1_01.jpg" alt="選ばれる3つの理由 ポイント1のイメージ画像">
+                    <img src="/assets/images/three_reason_point_1_02.png" alt="選ばれる3つの理由 ポイント1のロゴ">
                     <h3>実績のある講師陣だから安心</h3>
                     <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
@@ -66,8 +82,8 @@
                     </p>
                 </div>
                 <div class="reason__content--point2">
-                    <img src="/assets/image/three_reason_point_2_01.jpg" alt="選ばれる3つの理由 ポイント2のイメージ画像">
-                    <img src="/assets/image/three_reason_point_2_02.png" alt="選ばれる3つの理由 ポイント2のロゴ">
+                    <img src="/assets/images/three_reason_point_2_01.jpg" alt="選ばれる3つの理由 ポイント2のイメージ画像">
+                    <img src="/assets/images/three_reason_point_2_02.png" alt="選ばれる3つの理由 ポイント2のロゴ">
                     <h3>オンラインにも対応だから、早送り巻き戻し視聴できる。</h3>
                     <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
@@ -76,8 +92,8 @@
                     </p>
                 </div>
                 <div class="reason__content--point3">
-                    <img src="/assets/image/three_reason_point_3_01.jpg" alt="選ばれる3つの理由 ポイント3のイメージ画像">
-                    <img src="/assets/image/three_reason_point_3_02.png" alt="選ばれる3つの理由 ポイント3のロゴ">
+                    <img src="/assets/images/three_reason_point_3_01.jpg" alt="選ばれる3つの理由 ポイント3のイメージ画像">
+                    <img src="/assets/images/three_reason_point_3_02.png" alt="選ばれる3つの理由 ポイント3のロゴ">
                     <h3>徹底した個別指導で、弱点を残さずそれぞれに合わせた大学受験対策。</h3>
                     <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
@@ -93,7 +109,7 @@
                 <button class="application__button">入学説明会に申し込む</button>
             </div>
         </section>
-        <section class="choose">
+        <section class="choose" id="choose">
             <h2>コース・目的</h2>
             <div class="choose__contents">
                 <div class="choose__tabs">
@@ -104,72 +120,96 @@
                 </div>
                 <div class="choose__content--by-grade-level choose__content choose__content--active" id="content-tab-1">
                     <div>
-                        <img src="/assets/image/choose_high_school_01_sp.jpg" alt=" ">
+                        <div class="image__container">
+
+                            <img src="/assets/images/choose_high_school_01_sp.jpg" alt="" class="images--zoom">
+                        </div>
                         <div>
-                            <img src="/assets/image/choose_arrow_right_01_sp.png" alt=" ">
+                            <img src="/assets/images/choose_arrow_right_01_sp.png" alt="">
 
                             <p>高卒生</p>
                         </div>
                     </div>
                     <div>
-                        <img src="/assets/image/choose_senior_high_school_student_01_sp.jpg" alt=" ">
+                        <div class="image__container">
+
+                            <img src="/assets/images/choose_senior_high_school_student_01_sp.jpg" alt=""
+                                class="images--zoom">
+                        </div>
                         <div>
-                            <img src="/assets/image/choose_arrow_right_01_sp.png" alt=" ">
+                            <img src="/assets/images/choose_arrow_right_01_sp.png" alt=" ">
 
                             <p>高校3年生</p>
                         </div>
                     </div>
                     <div>
-                        <img src="/assets/image/choose_second-year_high_school_student_01_sp.jpg" alt=" ">
+                        <div class="image__container">
+
+                            <img src="/assets/images/choose_second-year_high_school_student_01_sp.jpg" alt=""
+                                class="images--zoom">
+                        </div>
                         <div>
-                            <img src="/assets/image/choose_arrow_right_01_sp.png" alt=" ">
+                            <img src="/assets/images/choose_arrow_right_01_sp.png" alt=" ">
                             <p>高校2年生</p>
                         </div>
                     </div>
                     <div>
-                        <img src="/assets/image/choose_first_year_high_school_student_01_sp.jpg" alt=" ">
+                        <div class="image__container">
+
+                            <img src="/assets/images/choose_first_year_high_school_student_01_sp.jpg" alt=""
+                                class="images--zoom">
+                        </div>
                         <div>
-                            <img src="/assets/image/choose_arrow_right_01_sp.png" alt=" ">
+                            <img src="/assets/images/choose_arrow_right_01_sp.png" alt="">
                             <p>高校1年生</p>
                         </div>
                     </div>
                 </div>
-
-
                 <div class="choose__content--by-purpose choose__content" id="content-tab-2">
                     <div>
-                        <img src="/assets/image/choose_difficult_universities_01_sp.jpg" alt=" ">
+                        <div class="image__container">
+                            <img src="/assets/images/choose_difficult_universities_01_sp.jpg" alt=""
+                                class="images--zoom">
+                        </div>
                         <div>
-                            <img src="/assets/image/choose_arrow_right_01_sp.png" alt=" ">
-
+                            <div class="image__container">
+                                <img src="/assets/images/choose_arrow_right_01_sp.png" alt=" ">
+                            </div>
                             <p>難関大学・医学部合格を目指す</p>
                         </div>
                     </div>
                     <div>
-                        <img src="/assets/image/choose_prestigious_private_university_01_sp.jpg" alt=" ">
+                        <div class="image__container">
+                            <img src="/assets/images/choose_prestigious_private_university_01_sp.jpg" alt=""
+                                class="images--zoom">
+                        </div>
                         <div>
-                            <img src="/assets/image/choose_arrow_right_01_sp.png" alt=" ">
+                            <img src="/assets/images/choose_arrow_right_01_sp.png" alt=" ">
 
                             <p>名門私立大学合格を目指す</p>
                         </div>
                     </div>
                     <div>
-                        <img src="/assets/image/choose_national_and_public_universities_01_sp.jpg" alt=" ">
+                        <div class="image__container">
+                            <img src="/assets/images/choose_national_and_public_universities_01_sp.jpg" alt=""
+                                class="images--zoom">
+                        </div>
                         <div>
-                            <img src="/assets/image/choose_arrow_right_01_sp.png" alt=" ">
+                            <img src="/assets/images/choose_arrow_right_01_sp.png" alt=" ">
                             <p>国公立大学合格を目指す</p>
                         </div>
                     </div>
                     <div>
-                        <img src="/assets/image/choose_overseas_universities_01_sp.jpg" alt=" ">
+                        <div class="image__container">
+                            <img src="/assets/images/choose_overseas_universities_01_sp.jpg" alt=""
+                                class="images--zoom">
+                        </div>
                         <div>
-                            <img src="/assets/image/choose_arrow_right_01_sp.png" alt=" ">
+                            <img src="/assets/images/choose_arrow_right_01_sp.png" alt=" ">
                             <p>海外の大学合格を目指す</p>
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </section>
         <section class="application">
@@ -178,8 +218,66 @@
                 <button class="application__button">入学説明会に申し込む</button>
             </div>
         </section>
-        <section>
+        <section class="cost" id="cost">
             <h2>費 用</h2>
+            <table class="cost__table">
+                <tr>
+                    <th>
+                        年間講数
+                    </th>
+                    <th>
+                        年間授業料（税込み）
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        5講
+                    </td>
+                    <td>
+                        24,500円
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        10講
+                    </td>
+                    <td>
+                        49,000円
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        11講
+                    </td>
+                    <td>
+                        53,900円
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        12講
+                    </td>
+                    <td>
+                        58,800円
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        22講
+                    </td>
+                    <td>
+                        107,800円
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        24講
+                    </td>
+                    <td>
+                        117,600円
+                    </td>
+                </tr>
+            </table>
         </section>
         <section class="application application--last">
             <div class="application__content">
@@ -188,17 +286,18 @@
             </div>
         </section>
         <section class="qa">
-            <img src="/assets/image/choose_second-year_high_school_student_01_sp.jpg" alt=" ">
-
-
+            <div class="image__container">
+                <img src="/assets/images/find_a_classroom_near_you_01_sp.jpg" alt="" class="images--zoom">
+            </div>
         </section>
         <section class="find-a-class">
-            <img src="/assets/image/choose_second-year_high_school_student_01_sp.jpg" alt=" ">
-
+            <div class="image__container">
+                <img src="/assets/images/frequently_asked_questions_01_sp.jpg" alt="" class="images--zoom">
+            </div>
         </section>
     </main>
     <footer>
-        <p></p>
+        <p>copyright© 2023 Kira-Kira Juku All Rights Reserved.</p>
     </footer>
 
 </body>
