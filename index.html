@@ -21,58 +21,90 @@
 </head>
 
 <body>
-    <header>
-        <h1>Kira-Kira Juku</h1>
+    <header class="header">
+        <h1 class="header__title"><a class="header__title--link" href="/">Kira-Kira Juku</a></h1>
         <nav class="pc-nav">
             <ul class="pc-nav__ul">
-                <li><a href="#">選ばれる3つの理由</a></li>
-                <li><a href="#">コース・目的</a></li>
-                <li><a href="#">費 用</a></li>
+                <li><a href="#reason">選ばれる3つの理由</a></li>
+                <li><a href="#choose">コース・目的</a></li>
+                <li><a href="#cost">費 用</a></li>
                 <div class="application__content">
                     <button class="application__button">入学説明会に申し込む</button>
                 </div>
             </ul>
         </nav>
         <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span class="hamburger--txt"></span>
+            <span class="hamburger--txt"></span>
+            <span class="hamburger--txt"></span>
         </div>
         <nav class="sp-nav">
-            <ul>
-                <li><a href="#reason">選ばれる3つの理由</a></li>
-                <li><a href="#">コース・目的</a></li>
-                <li><a href="#cost">費 用</a></li>
+            <ul class="sp-nav__list">
+                <li class="sp-nav__item">
+                    <img class="sp-nav__img" src="/assets/images/hamburger_menu_arrow_right_sp.png" alt="右の矢印画像" />
+                    <a class="sp-nav__link"" href=" #reason">選ばれる3つの理由</a>
+                </li>
+                <li class="sp-nav__item">
+                    <img class="sp-nav__img" src="/assets/images/hamburger_menu_arrow_right_sp.png" alt="右の矢印画像" />
+                    <a href="#choose">コース・目的</a>
+                </li>
+                <li class="sp-nav__item">
+                    <img class="sp-nav__img" src="/assets/images/hamburger_menu_arrow_right_sp.png" alt="右の矢印画像" />
+                    <a href="#cost">費 用</a>
+                </li>
             </ul>
-            <div class="application__content">
-                <button class="application__button">入学説明会に申し込む</button>
+            <div class="sp-nav__content">
+                <a href="/entry" class="sp-nav__link--cta btn__link"><span
+                        class="sp-nav__link--txt btn__text">入学説明会に申し込む</span></a>
             </div>
         </nav>
     </header>
     <main class="main">
         <section class="mv">
-            <picture>
-                <source media="(min-width: 768px)" srcset="/assets/images/mv_01_pc.jpg" />
-                <img class="cover-images" src="/assets/images/mv_01_sp.jpg" alt="入学説明会のお申し込み開始のイメージ画像" />
-            </picture>
+            <div class="cover__container">
+                <picture class="cover__picture">
+                    <source media="(min-width: 768px)" srcset="/assets/images/mv_pc.jpg" />
+                    <img class="cover__picture--image" src="/assets/images/mv_sp.jpg" alt="入学説明会のお申し込み開始のイメージ画像" />
+                </picture>
+                <div class="cover__content">
+                    <div class="cover__info">
+                        <img class="cover__arrow-icon" src="/assets/images/mv_frame_left_sp.png" alt="" />
+                        <div class="cover__achievements">
+                            <p class="cover__achievement-title">難関大学の合格実績</p>
+                            <p class="cover__achievement-number">No.<span
+                                    class="cover__achievement-number--one">1</span></p>
+                        </div>
+                        <img class="cover__arrow-icon" src="/assets/images/mv_frame_right_sp.png" alt="" />
+                    </div>
+                    <div class="cover__announcement">
+                        <p class="cover__announcement-title">現役高校生・高卒生</p>
+                        <p class="cover__announcement-text">入学説明会の<br>お申し込み開始</p>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="action">
             <div class="action__buttons">
-                <button class="action__button--contact">入学のお問い合わせ</button>
-                <button class="action__button--application">
-                    無料体験に申し込む
-                </button>
-                <button class="action__button--request">資料請求する</button>
+                <div>
+                    <a href="/inquiry" class="action__button action__button--contact">入学のお問い合わせ</a>
+                </div>
+                <div>
+                    <a href="/freetrial" class="action__button action__button--application"> 無料体験に申し込む</a>
+                </div>
+                <div>
+                    <a href="/request" class="action__button action__button--request">資料請求する</a>
+                </div>
             </div>
         </section>
         <section class="reason" id="reason">
             <div class="reason__contents">
-                <h2>選ばれる<span class="reason--three-txt">3</span>つの理由</h2>
+                <h2 class="reason__title">選ばれる<span class="reason--three-txt">3</span>つの理由</h2>
                 <div class="reason__content--point1 reason__content">
-                    <img src="/assets/images/three_reason_point_1_01.jpg" alt="選ばれる3つの理由 ポイント1のイメージ画像" />
-                    <img src="/assets/images/three_reason_point_1_02.png" alt="選ばれる3つの理由 ポイント1のロゴ" />
-                    <h3>実績のある講師陣だから安心</h3>
-                    <p>
+                    <img class="reason__image" src="/assets/images/three_reason_point_1_01.jpg"
+                        alt="選ばれる3つの理由 ポイント1のイメージ画像" />
+                    <p class="reason__content--txt">Point<span class="reason__content--txt-highlight">&nbsp1</span></p>
+                    <h3 class="reason__content-heading">実績のある講師陣だから安心</h3>
+                    <p class="reason__content-body">
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
@@ -81,9 +113,9 @@
                 </div>
                 <div class="reason__content--point2 reason__content">
                     <img src="/assets/images/three_reason_point_2_01.jpg" alt="選ばれる3つの理由 ポイント2のイメージ画像" />
-                    <img src="/assets/images/three_reason_point_2_02.png" alt="選ばれる3つの理由 ポイント2のロゴ" />
-                    <h3>オンラインにも対応だから、早送り巻き戻し視聴できる。</h3>
-                    <p>
+                    <p class="reason__content--txt">Point<span class="reason__content--txt-highlight">&nbsp2</span></p>
+                    <h3 class="reason__content-heading">オンラインにも対応だから、早送り巻き戻し視聴できる。</h3>
+                    <p class="reason__content-body">
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
@@ -92,11 +124,11 @@
                 </div>
                 <div class="reason__content--point3 reason__content">
                     <img src="/assets/images/three_reason_point_3_01.jpg" alt="選ばれる3つの理由 ポイント3のイメージ画像" />
-                    <img src="/assets/images/three_reason_point_3_02.png" alt="選ばれる3つの理由 ポイント3のロゴ" />
-                    <h3>
+                    <p class="reason__content--txt">Point<span class="reason__content--txt-highlight">&nbsp3</span></p>
+                    <h3 class="reason__content-heading">
                         徹底した個別指導で、弱点を残さずそれぞれに合わせた大学受験対策。
                     </h3>
-                    <p>
+                    <p class="reason__content-body">
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                         テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
@@ -105,15 +137,19 @@
                 </div>
             </div>
         </section>
-        <section class="application">
-            <div class="application__content">
-                <p>入学ご検討の方は、まずは入学説明会にお越しください</p>
-                <button class="application__button">入学説明会に申し込む</button>
+        <div class="application">
+            <div class="application__container">
+                <p class="application__text">入学ご検討の方は、まずは入学説明会にお越しください</p>
+                <div class="application__content">
+                    <a href="/entry" class="application__btn">
+                        <span class="application__btn-text">入学説明会に申し込む</span>
+                    </a>
+                </div>
             </div>
-        </section>
+        </div>
         <section class="choose" id="choose">
-            <h2>コース・目的</h2>
             <div class="choose__contents">
+                <h2 class="choose__title">コース・目的</h2>
                 <div class="choose__tabs">
                     <div class="choose__tab choose__tab--by-grade-level choose_tab--active" id="tab-1">
                         学年別から選ぶ
@@ -131,7 +167,7 @@
                             <div class="choose__content--image">
                                 <img src="/assets/images/choose_arrow_right_01_sp.png" alt="" />
                             </div>
-                            <p>高卒生</p>
+                            <p class="choose__txt">高卒生</p>
                         </div>
                     </div>
                     <div class="choose__content--image-select">
@@ -143,7 +179,7 @@
                             <div class="choose__content--image">
                                 <img src="/assets/images/choose_arrow_right_01_sp.png" alt=" " />
                             </div>
-                            <p>高校3年生</p>
+                            <p class="choose__txt">高校3年生</p>
                         </div>
                     </div>
                     <div class="choose__content--image-select">
@@ -155,7 +191,7 @@
                             <div class="choose__content--image">
                                 <img src="/assets/images/choose_arrow_right_01_sp.png" alt=" " />
                             </div>
-                            <p>高校2年生</p>
+                            <p class="choose__txt">高校2年生</p>
                         </div>
                     </div>
                     <div class="choose__content--image-select">
@@ -167,7 +203,7 @@
                             <div class="choose__content--image">
                                 <img src="/assets/images/choose_arrow_right_01_sp.png" alt="" />
                             </div>
-                            <p>高校1年生</p>
+                            <p class="choose__txt">高校1年生</p>
                         </div>
                     </div>
                 </div>
@@ -181,7 +217,7 @@
                             <div class="choose__content--image">
                                 <img src="/assets/images/choose_arrow_right_01_sp.png" alt=" " />
                             </div>
-                            <p>難関大学・医学部合格を目指す</p>
+                            <p class="choose__txt">難関大学・医学部合格を目指す</p>
                         </div>
                     </div>
                     <div class="choose__content--image-select">
@@ -193,7 +229,7 @@
                             <div class="choose__content--image">
                                 <img src="/assets/images/choose_arrow_right_01_sp.png" alt=" " />
                             </div>
-                            <p>名門私立大学合格を目指す</p>
+                            <p class="choose__txt">名門私立大学合格を目指す</p>
                         </div>
                     </div>
                     <div class="choose__content--image-select">
@@ -205,7 +241,7 @@
                             <div class="choose__content--image">
                                 <img src="/assets/images/choose_arrow_right_01_sp.png" alt=" " />
                             </div>
-                            <p>国公立大学合格を目指す</p>
+                            <p class="choose__txt">国公立大学合格を目指す</p>
                         </div>
                     </div>
                     <div class="choose__content--image-select">
@@ -217,24 +253,28 @@
                             <div class="choose__content--image">
                                 <img src="/assets/images/choose_arrow_right_01_sp.png" alt=" " />
                             </div>
-                            <p>海外の大学合格を目指す</p>
+                            <p class="choose__txt">海外の大学合格を目指す</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="application">
-            <div class="application__content">
-                <p>入学ご検討の方は、まずは入学説明会にお越しください</p>
-                <button class="application__button">入学説明会に申し込む</button>
+        <div class="application">
+            <div class="application__container">
+                <p class="application__text">入学ご検討の方は、まずは入学説明会にお越しください</p>
+                <div class="application__content">
+                    <a href="/entry" class="application__btn">
+                        <span class="application__btn-text">入学説明会に申し込む</span>
+                    </a>
+                </div>
             </div>
-        </section>
+        </div>
         <section class="cost" id="cost">
-            <h2>費 用</h2>
             <table class="cost__table">
+                <h2 class="cost__title">費 用</h2>
                 <tr>
-                    <td class="cost__table--head">年間講数</td>
-                    <td class="cost__table--head">年間授業料（税込み）</td>
+                    <td class="cost__table--head cost__table--head-left">年間講数</td>
+                    <td class="cost__table--head cost__table--head-right">年間授業料（税込み）</td>
                 </tr>
                 <tr>
                     <td class="cost__table--left-td">5講</td>
@@ -262,20 +302,28 @@
                 </tr>
             </table>
         </section>
-        <section class="application application--last">
-            <div class="application__content">
-                <p>入学ご検討の方は、まずは入学説明会にお越しください</p>
-                <button class="application__button">入学説明会に申し込む</button>
+        <div class="application">
+            <div class="application__container">
+                <p class="application__text">入学ご検討の方は、まずは入学説明会にお越しください</p>
+                <div class="application__content">
+                    <a href="/entry" class="application__btn">
+                        <span class="application__btn-text">入学説明会に申し込む</span>
+                    </a>
+                </div>
             </div>
-        </section>
+        </div>
         <section class="qa">
             <div class="image__container">
-                <img src="/assets/images/find_a_classroom_near_you_01_sp.jpg" alt="" class="images--zoom" />
+                <a href="/faq">
+                    <img src="/assets/images/find_a_classroom_near_you_01_sp.jpg" alt="" class="images--zoom" />
+                </a>
             </div>
         </section>
         <section class="find-a-class">
             <div class="image__container">
-                <img src="/assets/images/frequently_asked_questions_01_sp.jpg" alt="" class="images--zoom" />
+                <a href="/search">
+                    <img src="/assets/images/frequently_asked_questions_01_sp.jpg" alt="" class="images--zoom">
+                </a>
             </div>
         </section>
     </main>

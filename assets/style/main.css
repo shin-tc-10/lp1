@@ -5,7 +5,6 @@ html {
 }
 
 body {
-  width: 375px;
   margin: 0 auto;
   font-family: "Noto Sans JP", sans-serif;
   line-height: 1.75;
@@ -32,50 +31,64 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
-  width: 375px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* 右方向に影 */
+  height: 7rem;
+  width: 100%;
+  box-shadow: 0rem 0.2rem 0.8rem rgba(0, 0, 0, 0.2); /* 右方向に影 */
   color: #005bac;
-  height: 70px;
+  height: 7rem;
   font-size: 1.2rem;
+  background-color: #ffffff; /* 背景色 */
+  position: sticky; /* これで追尾される */
+  top: 0; /* 上端に固定 */
+  z-index: 1000; /* 他のコンテンツより前面に表示 */
 }
 
-header h1 {
-  display: inline-block;
+.header__title--link {
   color: #005bac;
-  height: 34px;
   font-size: 2.2rem;
-  margin: 18px 0 0 16px;
-}
-
-.pc-nav {
-  display: none;
+  padding: 1.8rem 0 0 1.6rem;
 }
 
 /** スマホハンバーガーメニュー */
 .hamburger {
-  display: none; /* デフォルトでは非表示 */
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 20px;
+  display: block;
+  background-color: #005bac;
+  width: 7rem;
+  height: 100%;
   cursor: pointer;
+  padding: 2.2rem 2rem 2.17rem;
 }
 
-.hamburger span {
+.hamburger--txt {
   display: block;
-  height: 2px;
-  background-color: #333;
+  margin: 0 0 0.525rem 0;
+  height: 0.525rem;
+  background-color: #ffffff;
 }
 
 .sp-nav {
-  display: none; /* デフォルトでは非表示 */
-  position: absolute;
-  top: 60px; /* ヘッダーの高さに合わせて調整 */
+  position: fixed;
+  top: 7rem;
+  right: -100%;
+  background-color: #005bac;
+  width: 100%;
+  font-size: 1.8rem;
+  height: 33.1rem;
+  padding: 2rem 2rem 3.2rem;
+  transition: right 0.3s;
+  z-index: 10; /* 他の要素より前面に表示 */
+}
+
+.sp-nav__container {
+  width: 100%;
+}
+
+.sp-nav.active {
   right: 0;
-  background-color: #f0f0f0;
-  width: 200px;
-  padding: 20px;
+}
+
+.sp-nav a {
+  color: #ffffff;
 }
 
 .sp-nav ul {
@@ -85,48 +98,143 @@ header h1 {
 }
 
 .sp-nav li {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem solid #80add5;
 }
 
-.sp-nav.active {
-  display: block; /* メニュー表示時のスタイル */
-}
-
-.hamburger {
+.sp-nav__item {
   display: flex;
+  align-items: center;
+  padding: 0 0 2rem 0;
 }
 
-.sp-nav {
+.sp-nav__img {
+  height: 1.201rem;
+  width: 1.4rem;
+  margin: 0 1.2rem 0 0;
+}
+
+.sp-nav__content {
+  height: 6.6rem;
+  width: 100%;
+  margin: 3.2rem 0 0 0;
+}
+
+.sp-nav__link--cta {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding: 2rem 0;
+  background-color: #ffffff;
+  border-radius: 3.3rem;
+  text-align: center;
+}
+
+.sp-nav__link--cta:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.sp-nav__link--txt {
+  color: #005bac;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.pc-nav {
   display: none;
-  position: absolute;
-  top: 60px;
-  right: -200px; /* 初期位置を右にずらす */
-  background-color: #f0f0f0;
-  width: 200px;
-  padding: 20px;
-  transition: right 0.3s ease-in-out; /* アニメーションを追加 */
 }
 
-.sp-nav.active {
-  display: block;
-  right: 0; /* 右からスライドして表示 */
+/* メインビジュアル */
+.mv {
+  height: 25rem;
+}
+
+.cover__container {
+  position: relative;
+  height: 100%;
+}
+
+.cover__content {
+  position: absolute;
+  width: 17.5rem;
+  height: 18.132rem;
+  top: 0;
+  text-align: center;
+  margin: 3.4rem 0rem 3.47rem 1.6rem;
+}
+
+.cover__achievement-title {
+  font-size: 1.1rem;
+}
+
+.cover__achievement-number {
+  font-family: "Poppins", sans-serif; /* Poppinsフォントファミリを指定 */
+  font-weight: 800; /* ExtraBold */
+  font-style: italic; /* Italic */
+  font-size: 2.5rem;
+  color: #f11f8d;
+}
+
+.cover__achievement-number--one {
+  font-size: 3.6rem;
+}
+
+.cover__info {
+  height: 6.85rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 2.07rem 0;
+}
+
+.cover__announcement {
+  text-align: left;
+}
+
+.cover__announcement-title {
+  font-size: 1.4rem;
+}
+
+.cover__announcement-text {
+  font-size: 2.5rem;
+  color: #005bac;
+  font-weight: 900; /* Heavyウェイト */
+}
+
+.cover__picture--image {
+  display: block; /* インライン要素の余白問題を解消 */
+  width: 100%; /* 親要素の幅いっぱいに広げる */
+  height: 100%; /* 親要素の高さいっぱいに広げる */
+  object-fit: cover; /* アスペクト比を維持しつつ要素全体を覆う */
 }
 
 /* メインビジュアル下 申し込みエリア */
 .action {
-  height: 168px;
-  width: 250px;
-  margin: 24px 62px 24px 63px;
+  height: 16.8rem;
+  width: 25rem;
+  margin: 2.4rem 6.2rem 2.4rem 6.3rem;
 }
 
-.action button {
-  height: 48px;
+.action__button {
+  display: inline-block;
   width: 100%;
   color: #ffffff;
-  border-radius: 25px;
+  border-radius: 2.5rem;
   border: none;
   font-weight: bold;
   font-size: 1.6rem;
+  text-align: center;
+  line-height: 4.8rem;
+}
+
+.action__button:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+/* ホバー時に光るエフェクトを遅延させる */
+.action__button:hover {
+  transition-delay: 0.2s; /* 光るエフェクトの遅延時間 */
 }
 
 .action__button--contact {
@@ -135,7 +243,7 @@ header h1 {
 
 .action__button--application {
   background-color: #f6aa00;
-  margin: 12px 0;
+  margin: 1.2rem 0;
 }
 
 .action__button--request {
@@ -143,78 +251,108 @@ header h1 {
 }
 
 /* 入会申し込みエリア */
-.application__button {
-  color: #ffffff;
-  border: none;
-  border-radius: 35px;
-  background: linear-gradient(to bottom, rgb(2, 113, 224), rgb(50, 150, 250));
-}
-
 .application {
   background-color: rgb(255, 85, 85, 10%);
-  padding: 40px 16px;
-  margin: 0 0 64px 0;
+  padding: 4rem 3.5rem;
 }
 
-.application__content {
-  width: 343px;
+.application__container {
   text-align: center;
 }
 
-.application__content p {
+.application__text {
   font-size: 1.6rem;
+  margin: 0 0 1.2rem 0;
 }
 
-.application__button {
-  width: 305px;
-  height: 69px;
+.application__btn {
+  color: #ffffff;
+  background: linear-gradient(to bottom, rgb(2, 113, 224), rgb(50, 150, 250));
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding: 2rem 5.3rem 2rem 5.2rem;
+  border-radius: 3.5rem;
+  text-align: center;
+}
+
+.application__btn:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.application__btn-text {
   font-size: 2rem;
+  font-weight: bold;
 }
 
 /* 選ばれる３つの理由 */
 .reason {
-  padding: 16px;
+  padding: 1.6rem;
 }
 
-.reason__contents h2 {
+.reason__title {
   font-size: 2.8rem;
   text-align: center;
+  margin: 0 0 1.7rem 0;
+}
+
+.reason__content-heading {
+  font-size: 2rem;
 }
 
 .reason--three-txt {
-  font-size: 40px;
+  font-size: 4rem;
   color: #f11f8d;
   font-weight: bold;
 }
 
 .reason__content {
-  margin: 0 0 36px 0;
+  margin: 0 0 3.6rem 0;
 }
 
-.reason__content h3 {
-  font-size: 2rem;
-}
-
-.reason__content p {
+.reason__content-body {
   font-size: 1.6rem;
 }
 
+.reason__image {
+  margin: 0 0 0.8rem 0;
+}
+
+.reason__content--txt {
+  font-family: "Poppins", sans-serif; /* Poppinsフォントファミリを指定 */
+  font-weight: 800; /* ExtraBold */
+  font-style: italic; /* Italic */
+  font-size: 2.4rem;
+  color: #f11f8d;
+}
+
+.reason__content--txt-highlight {
+  font-size: 3.6rem;
+}
+
 /* コース・目的エリア  */
-.choose h2 {
+.choose {
+  margin: 0 0 6.3rem 0;
+}
+
+.choose__title {
   text-align: center;
   font-size: 2.8rem;
+  margin: 6.4rem 0 2.1rem 0;
 }
 .choose__contents {
   width: 100%;
-  padding: 16px;
+  padding: 1.6rem 0;
+}
+
+.choose__tabs {
+  padding: 0 1.6rem;
 }
 
 .choose__content {
   background: #f2f9ff;
-}
-
-.choose__content p {
-  font-size: 2rem;
+  padding: 2.8rem 1.6rem;
 }
 
 .choose__tabs {
@@ -222,7 +360,7 @@ header h1 {
 }
 
 .choose__tab--by-grade-level {
-  margin: 0 15px 0 0;
+  margin: 0 1.5rem 0 0;
   font-size: 1.8rem;
 }
 
@@ -232,10 +370,10 @@ header h1 {
 
 .choose__tab {
   background-color: #f0f0f0;
-  height: 66px;
-  width: 164px;
-  padding: 20px 19px;
-  border-radius: 12px 12px 0 0;
+  height: 6.6rem;
+  width: 16.4rem;
+  padding: 2rem 1.9rem;
+  border-radius: 1.2rem 1.2rem 0 0;
   cursor: pointer;
   font-weight: bold;
 }
@@ -255,53 +393,78 @@ header h1 {
 
 .choose__content--select {
   display: flex;
-  margin: 12px 0 0 0;
+  margin: 1.2rem 0 2.8rem 0;
 }
 
 .choose__content--image {
   display: flex;
-  margin: 0 8.2px 0 0;
   align-items: center;
+  margin: 0 0.82rem 0 0;
 }
 
-.choose__content--image-select {
-  margin: 0 0 69px 0;
+.choose__txt {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 /* 費用エリアのスタイル */
-.cost h2 {
+.cost {
+  margin: 6.4rem 0;
+  padding: 0 1.6rem 0;
+}
+
+.cost__title {
   font-size: 2.8rem;
   text-align: center;
+  margin: 0 0 2.3rem 0;
 }
 
 .cost__table {
   border-spacing: 0; /* セル間の隙間をなくす */
   border-collapse: collapse; /* セルの境界線を重ねて表示する */
-  border: 1px solid #cccccc;
+  border: 0.5rem solid #cccccc;
   width: 100%;
   font-size: 1.6rem;
   text-align: center;
 }
 
 .cost__table td {
-  border: 1px solid #cccccc;
-  padding: 10px;
+  border: 0.1rem solid #cccccc;
 }
 
 .cost__table--head {
   background-color: #f5f5f5;
 }
 
+.cost__table--head-left {
+  padding: 2rem 0;
+}
+
+.cost__table--head-right {
+  padding: 2rem 0;
+}
+
+.cost__table--left-td {
+  padding: 1.9rem 0;
+}
+
 .cost__table--right-td {
   font-size: 2.8rem;
   color: #f23397;
   font-weight: bold;
+  padding: 1.2rem 0;
+}
+
+/* お近くの教室を探す・よくあるご質問 */
+.image__container:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
 }
 
 /* フッターのスタイル */
 footer {
   display: flex;
-  height: 83px;
+  height: 8.3rem;
   background-color: #dddddd;
   font-size: 1.3rem;
   justify-content: center;
@@ -313,32 +476,38 @@ footer {
 }
 
 /* PC・タブレット表示 */
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   html {
     font-size: calc(10 * 100vw / 1200); /* 1200はPCカンプのコンテンツ幅 */
     scroll-behavior: smooth;
   }
 
-  body {
-    width: 1200px;
-    font-size: 1.6rem;
-  }
-
   header {
     width: 100%;
-    height: 101px;
+    height: 10.1rem;
   }
 
   header h1 {
     display: inline-block;
     color: #005bac;
-    height: 45px;
+    height: 4.5rem;
     font-size: 3.2rem;
-    margin: 28px 158px 28px 28px;
+    margin: 2.8rem 15.8rem 2.8rem 2.8rem;
+  }
+
+  .hamburger {
+    display: none;
   }
 
   .pc-nav {
     display: block;
+    height: 7rem;
+    width: 100%;
+  }
+
+  .pc-nav__ul {
+    display: flex;
+    justify-content: space-around;
   }
 
   .hamburger span {
@@ -359,14 +528,9 @@ footer {
     transform: scale(1.2); /* 1.2倍に拡大 */
   }
 
-  .pc-nav__ul {
-    display: flex;
-    justify-content: space-around;
-  }
-
   .application__button {
-    width: 282px;
-    height: 61px;
+    width: 28.2rem;
+    height: 6.1rem;
   }
 }
 
