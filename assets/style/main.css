@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/* Noto Sans JP フォント */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap");
+/* Poppins フォント */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap");
 
 html {
   font-size: calc(10 * 100vw / 375); /* 390はSPデザインカンプの幅 */
@@ -41,12 +45,13 @@ header {
   position: sticky; /* これで追尾される */
   top: 0; /* 上端に固定 */
   z-index: 1000; /* 他のコンテンツより前面に表示 */
+  padding: 0 0 0 1.6rem;
 }
 
 .header__title--link {
   color: #005bac;
   font-size: 2.2rem;
-  padding: 1.8rem 0 0 1.6rem;
+  padding: 1.8rem 0 0 0;
 }
 
 /** スマホハンバーガーメニュー */
@@ -146,22 +151,23 @@ header {
 }
 
 /* メインビジュアル */
-.mv {
-  height: 25rem;
+.cover {
+  width: 100%;
 }
 
 .cover__container {
-  position: relative;
-  height: 100%;
+  height: 25rem;
+  background-image: url("/assets/images/mv_sp.jpg"); /* ここで背景画像を指定 */
+  background-size: cover; /* 背景画像が要素全体をカバーするように調整 */
+  background-repeat: no-repeat; /* 背景画像の繰り返しを防止 */
+  background-position: center center; /* 背景画像を左右中央に配置 */
+  padding: 3.4rem 0rem 3.47rem 1.6rem;
 }
 
 .cover__content {
-  position: absolute;
-  width: 17.5rem;
   height: 18.132rem;
   top: 0;
   text-align: center;
-  margin: 3.4rem 0rem 3.47rem 1.6rem;
 }
 
 .cover__achievement-title {
@@ -182,6 +188,7 @@ header {
 
 .cover__info {
   height: 6.85rem;
+  width: 15rem;
   display: flex;
   justify-content: space-between;
   margin: 0 0 2.07rem 0;
@@ -210,9 +217,10 @@ header {
 
 /* メインビジュアル下 申し込みエリア */
 .action {
-  height: 16.8rem;
-  width: 25rem;
-  margin: 2.4rem 6.2rem 2.4rem 6.3rem;
+  margin: 2.4rem 0 2.4rem 0;
+  padding: 2.4rem 6.2rem 2.4rem 6.3rem;
+  position: relative; /* positionを追加 */
+  z-index: 10; /* 他のエリアとの重なりを避ける */
 }
 
 .action__button {
@@ -229,7 +237,7 @@ header {
 
 .action__button:hover {
   opacity: 0.7;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease;
 }
 
 /* ホバー時に光るエフェクトを遅延させる */
@@ -268,7 +276,6 @@ header {
 .application__btn {
   color: #ffffff;
   background: linear-gradient(to bottom, rgb(2, 113, 224), rgb(50, 150, 250));
-  display: inline-block;
   height: 100%;
   width: 100%;
   padding: 2rem 5.3rem 2rem 5.2rem;
@@ -276,12 +283,17 @@ header {
   text-align: center;
 }
 
+.application__btn--nav {
+  width: 28.2rem;
+  height: 6.1rem;
+}
+
 .application__btn:hover {
   opacity: 0.7;
   transition: opacity 0.3s ease;
 }
 
-.application__btn-text {
+.application__btn--nav {
   font-size: 2rem;
   font-weight: bold;
 }
@@ -319,6 +331,10 @@ header {
   margin: 0 0 0.8rem 0;
 }
 
+.reason__image_wrapper {
+  text-align: center;
+}
+
 .reason__content--txt {
   font-family: "Poppins", sans-serif; /* Poppinsフォントファミリを指定 */
   font-weight: 800; /* ExtraBold */
@@ -347,16 +363,13 @@ header {
 }
 
 .choose__tabs {
+  display: flex;
   padding: 0 1.6rem;
 }
 
 .choose__content {
   background: #f2f9ff;
   padding: 2.8rem 1.6rem;
-}
-
-.choose__tabs {
-  display: flex;
 }
 
 .choose__tab--by-grade-level {
@@ -370,12 +383,12 @@ header {
 
 .choose__tab {
   background-color: #f0f0f0;
-  height: 6.6rem;
-  width: 16.4rem;
+  width: 100%;
   padding: 2rem 1.9rem;
   border-radius: 1.2rem 1.2rem 0 0;
   cursor: pointer;
   font-weight: bold;
+  text-align: center;
 }
 
 .choose__tab--active {
@@ -456,9 +469,46 @@ header {
 }
 
 /* お近くの教室を探す・よくあるご質問 */
-.image__container:hover {
+.qa-and-classrooms {
+  text-align: center;
+}
+
+.qa-and-classrooms__picture {
+  display: block; /* 画像の親要素が画像を囲み、レイアウトの余白をなくす */
+  width: 100%; /* 幅を100%に設定 */
+  height: 100%; /* 高さを100%に設定 */
+}
+
+.qa-and-classrooms__image {
+  width: 100%; /* 幅を親要素の幅に合わせる */
+  height: 100%; /* 高さを親要素の高さに合わせる */
+  object-fit: cover; /* 画像が親要素の領域に収まるように拡大・縮小し、余白をなくす */
+  display: block; /* インライン要素の余白をなくす */
+}
+
+.qa-and-classrooms__link:hover {
   opacity: 0.7;
   transition: opacity 0.3s ease;
+}
+/* 
+.qa-and-classrooms__image {
+  object-fit: cover;
+  display: block; 
+  width: 100%;
+} */
+
+.qa-and-classrooms__item {
+  position: relative;
+  display: inline-block; /* 要素がインラインブロックとして配置されるように */
+}
+
+.qa-and-classrooms__text {
+  position: absolute;
+  top: 40%;
+  left: 0.8rem;
+  font-size: 2.2rem; /* テキストサイズの調整 */
+  color: white; /* テキストカラー */
+  font-weight: bold; /* テキストを太字に */
 }
 
 /* フッターのスタイル */
@@ -482,36 +532,218 @@ footer {
     scroll-behavior: smooth;
   }
 
-  header {
-    width: 100%;
-    height: 10.1rem;
-  }
-
-  header h1 {
-    display: inline-block;
-    color: #005bac;
-    height: 4.5rem;
-    font-size: 3.2rem;
-    margin: 2.8rem 15.8rem 2.8rem 2.8rem;
-  }
-
+  /* スマホメニュー非表示 */
   .hamburger {
     display: none;
   }
 
+  .hamburger span {
+    display: none;
+  }
+
+  .sp-nav {
+    display: none;
+  }
+
+  /* ヘッダー */
+  header {
+    width: 100%;
+    height: 10.1rem;
+    padding: 0 2rem;
+  }
+
+  .header__title--link {
+    color: #005bac;
+    font-size: 3.2rem;
+  }
+
+  /* PCメニュー表示 */
   .pc-nav {
     display: block;
-    height: 7rem;
-    width: 100%;
   }
 
   .pc-nav__ul {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
   }
 
-  .hamburger span {
-    display: none;
+  .pc-nav__link {
+    font-size: 2rem;
+    line-height: 4.5rem;
+    padding: 0 4.8rem 0 0;
+  }
+
+  /* メイン */
+  .main {
+    width: 100%;
+  }
+
+  .action,
+  .reason,
+  .application,
+  .choose,
+  .cost,
+  .qa,
+  .find-a-class {
+    padding: 0 3.8rem;
+  }
+
+  /* メインビジュアル */
+  .cover {
+    position: relative;
+    width: 100%;
+  }
+
+  .cover__container {
+    height: 65.1rem;
+    background-image: url("/assets/images/mv_sp.jpg"); /* ここで背景画像を指定 */
+    background-size: cover; /* 背景画像が要素全体をカバーするように調整 */
+    background-repeat: no-repeat; /* 背景画像の繰り返しを防止 */
+    background-position: center center; /* 背景画像を左右中央に配置 */
+    padding: 10.4rem 0 0 5rem;
+  }
+
+  .cover__content {
+    top: 0;
+    text-align: center;
+  }
+
+  .cover__info {
+    width: 32.521rem;
+    height: 15rem;
+    margin: 0 0 3.2rem 0;
+  }
+
+  .cover__achievement-title {
+    font-size: 2rem;
+  }
+
+  .cover__achievement-number {
+    font-size: 5.4rem;
+  }
+
+  .cover__achievement-number--one {
+    font-size: 7.4rem;
+  }
+
+  .cover__announcement-title {
+    font-size: 3.3rem;
+  }
+
+  .cover__announcement-text {
+    font-size: 6rem;
+  }
+
+  /* 各種申し込みボタン */
+  .action {
+    position: absolute;
+    bottom: -7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* ボタンの間隔 */
+    width: 100%;
+    padding: 0 3rem;
+  }
+
+  .action__button {
+    height: 7.5rem;
+    line-height: 7.5rem;
+    width: 34rem;
+    border-radius: 3.8rem;
+    color: white;
+    font-size: 2.4rem;
+  }
+
+  .action__content--application {
+    margin: 0 4rem;
+  }
+
+  /* 選ばれる３つの理由 */
+  .reason {
+    margin: 7.2rem 0 0 0;
+  }
+
+  .reason__title {
+    font-size: 3.6rem;
+  }
+
+  .reason--three-txt {
+    font-size: 5.4rem;
+  }
+
+  .reason__content {
+    display: flex;
+  }
+
+  .reason__content--point2 {
+    flex-direction: row-reverse; /* 順番を逆にする */
+  }
+
+  .reason__image-wrapper-point2 {
+    padding: 0 0 0 2rem;
+  }
+
+  .reason__text-point2 {
+    padding: 0 2rem 0 0;
+  }
+
+  .reason__media {
+    width: 58rem;
+  }
+
+  .reason__image-wrapper {
+    padding: 0 2rem 0 0;
+  }
+
+  .reason__text {
+    padding: 0 0 0 2rem;
+  }
+
+  .reason__image-text {
+    padding: 0 0 0 2rem;
+  }
+
+  .application__button {
+    width: 28.2rem;
+    height: 6.1rem;
+  }
+
+  .application {
+    padding: 5.6rem 0;
+  }
+
+  .application__btn {
+    width: 38rem;
+  }
+
+  .application__text {
+    margin: 0 0 2rem 0;
+  }
+
+  /* コース・目的 */
+  .choose__tabs {
+    padding: 0;
+  }
+
+  .choose__content--image-select {
+    padding: 0 1.6rem;
+  }
+
+  .choose__content--select {
+    margin: 0;
+  }
+
+  .choose__content--top {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 0 4rem 0;
+  }
+
+  .choose__content--bottom {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
   }
 
   .image__container {
@@ -519,18 +751,56 @@ footer {
     overflow: hidden; /* 拡大した部分がはみ出さないように */
   }
 
-  .image--zoom {
-    transition: transform 0.3s ease; /* 拡大時のアニメーション */
-    width: 100%; /* 画像がコンテナにぴったり収まるように */
+  .image-zoom-wrapper {
+    overflow: hidden; /* 親要素からはみ出した部分を隠す */
   }
 
-  .image__container:hover .image--zoom {
+  .image-zoom {
+    transition: transform 0.3s ease; /* スムーズに拡大する */
+    width: 100%; /* 画像の幅を親要素に合わせる */
+    height: auto; /* 高さを自動で調整 */
+  }
+
+  .image-zoom-wrapper:hover .image-zoom {
     transform: scale(1.2); /* 1.2倍に拡大 */
   }
 
-  .application__button {
-    width: 28.2rem;
-    height: 6.1rem;
+  .cost {
+    padding: 0 30rem;
+    margin: 7.2rem 0;
+  }
+
+  .cost__title {
+    font-size: 3.6rem;
+    margin: 0 0 3.2rem 0;
+  }
+
+  .cost__table {
+    font-size: 1.8rem;
+  }
+
+  .cost__table--head-left {
+    padding: 2rem 0;
+  }
+
+  .cost__table--head-right {
+    padding: 2.4rem 0;
+  }
+
+  .cost__table--left-td {
+    padding: 1.6rem 0;
+  }
+
+  .cost__table--right-td {
+    font-size: 3.2rem;
+  }
+
+  .qa-and-classrooms {
+    display: flex;
+  }
+
+  .qa-and-classrooms__text {
+    font-size: 3.2rem;
   }
 }
 
