@@ -45,23 +45,44 @@ header {
   position: sticky; /* これで追尾される */
   top: 0; /* 上端に固定 */
   z-index: 1000; /* 他のコンテンツより前面に表示 */
-  padding: 0 0 0 1.6rem;
 }
 
-.header__title--link {
+.header__container {
+  max-width: 1200px;
+  margin-inline: auto;
+  width: 100%;
+  padding: 0 0 0 1.6rem;
+  height: 100%;
+}
+
+.header__content {
+  display: flex;
+  height: 100%;
+}
+
+.header__link {
+  display: block;
+  align-items: center; /* 垂直方向に中央寄せ */
   color: #005bac;
   font-size: 2.2rem;
-  padding: 1.8rem 0 0 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.header__image {
+  max-width: 100%;
+  height: 100%;
+  width: 16.337rem;
+  display: block;
 }
 
 /** スマホハンバーガーメニュー */
 .hamburger {
-  display: block;
   background-color: #005bac;
   width: 7rem;
   height: 100%;
   cursor: pointer;
   padding: 2.2rem 2rem 2.17rem;
+  margin-left: auto;
 }
 
 .hamburger--txt {
@@ -96,9 +117,9 @@ header {
   color: #ffffff;
 }
 
-.sp-nav ul {
+.sp-nav__list {
   list-style: none;
-  padding: 0;
+  padding: 0 0 3.2rem 0;
   margin: 0;
 }
 
@@ -107,28 +128,21 @@ header {
   border-bottom: 0.1rem solid #80add5;
 }
 
-.sp-nav__item {
-  display: flex;
-  align-items: center;
-  padding: 0 0 2rem 0;
-}
-
 .sp-nav__img {
   height: 1.201rem;
   width: 1.4rem;
   margin: 0 1.2rem 0 0;
 }
 
-.sp-nav__content {
-  height: 6.6rem;
+.sp-nav__link {
+  display: flex;
   width: 100%;
-  margin: 3.2rem 0 0 0;
+  align-items: center;
+  height: 5rem;
 }
 
 .sp-nav__link--cta {
-  display: inline-block;
-  height: 100%;
-  width: 100%;
+  display: block;
   padding: 2rem 0;
   background-color: #ffffff;
   border-radius: 3.3rem;
@@ -153,15 +167,17 @@ header {
 /* メインビジュアル */
 .cover {
   width: 100%;
-}
-
-.cover__container {
   height: 25rem;
   background-image: url("/assets/images/mv_sp.jpg"); /* ここで背景画像を指定 */
   background-size: cover; /* 背景画像が要素全体をカバーするように調整 */
   background-repeat: no-repeat; /* 背景画像の繰り返しを防止 */
-  background-position: center center; /* 背景画像を左右中央に配置 */
   padding: 3.4rem 0rem 3.47rem 1.6rem;
+  background-position: center center;
+}
+
+.cover__container {
+  max-width: 1200px;
+  margin-inline: auto;
 }
 
 .cover__content {
@@ -172,6 +188,7 @@ header {
 
 .cover__achievement-title {
   font-size: 1.1rem;
+  height: 1.1rem;
 }
 
 .cover__achievement-number {
@@ -217,14 +234,13 @@ header {
 
 /* メインビジュアル下 申し込みエリア */
 .action {
-  margin: 2.4rem 0 2.4rem 0;
-  padding: 2.4rem 6.2rem 2.4rem 6.3rem;
+  padding: 2.4rem 6.2rem 0 6.3rem;
   position: relative; /* positionを追加 */
   z-index: 10; /* 他のエリアとの重なりを避ける */
 }
 
 .action__button {
-  display: inline-block;
+  display: block;
   width: 100%;
   color: #ffffff;
   border-radius: 2.5rem;
@@ -265,6 +281,9 @@ header {
 }
 
 .application__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
@@ -273,9 +292,14 @@ header {
   margin: 0 0 1.2rem 0;
 }
 
+.application__btn-text {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 .application__btn {
   color: #ffffff;
-  background: linear-gradient(to bottom, rgb(2, 113, 224), rgb(50, 150, 250));
+  background: linear-gradient(to right, rgb(2, 113, 224), rgb(50, 150, 250));
   height: 100%;
   width: 100%;
   padding: 2rem 5.3rem 2rem 5.2rem;
@@ -301,6 +325,11 @@ header {
 /* 選ばれる３つの理由 */
 .reason {
   padding: 1.6rem;
+}
+
+.reason__container {
+  max-width: 1200px;
+  margin-inline: auto;
 }
 
 .reason__title {
@@ -329,6 +358,7 @@ header {
 
 .reason__image {
   margin: 0 0 0.8rem 0;
+  width: 100%;
 }
 
 .reason__image_wrapper {
@@ -357,9 +387,11 @@ header {
   font-size: 2.8rem;
   margin: 6.4rem 0 2.1rem 0;
 }
-.choose__contents {
+.choose__container {
   width: 100%;
   padding: 1.6rem 0;
+  max-width: 1200px;
+  margin-inline: auto;
 }
 
 .choose__tabs {
@@ -370,6 +402,7 @@ header {
 .choose__content {
   background: #f2f9ff;
   padding: 2.8rem 1.6rem;
+  display: none;
 }
 
 .choose__tab--by-grade-level {
@@ -396,8 +429,21 @@ header {
   color: #333333;
 }
 
-.choose__content {
-  display: none;
+.cource__image {
+  width: 100%;
+}
+
+.image-zoom-wrapper {
+  overflow: hidden; /* 親要素からはみ出した部分を隠す */
+  border-radius: 1.2rem;
+}
+
+.qa-and-classrooms__item {
+  border-radius: 0;
+}
+
+.choose__image--arrow {
+  padding: 0 0.81rem 0 0;
 }
 
 .choose__content--active {
@@ -407,6 +453,7 @@ header {
 .choose__content--select {
   display: flex;
   margin: 1.2rem 0 2.8rem 0;
+  align-items: center;
 }
 
 .choose__content--image {
@@ -420,10 +467,22 @@ header {
   font-weight: bold;
 }
 
+.choose__content--select {
+  padding: 1.2rem 0 0 0;
+}
+
+.choose__link:hover {
+  color: #0056b3;
+}
+
 /* 費用エリアのスタイル */
 .cost {
-  margin: 6.4rem 0;
-  padding: 0 1.6rem 0;
+  padding: 6.4rem 1.6rem;
+}
+
+.cost__container {
+  max-width: 1200px;
+  margin-inline: auto;
 }
 
 .cost__title {
@@ -435,7 +494,7 @@ header {
 .cost__table {
   border-spacing: 0; /* セル間の隙間をなくす */
   border-collapse: collapse; /* セルの境界線を重ねて表示する */
-  border: 0.5rem solid #cccccc;
+  border: 0.3rem solid #cccccc;
   width: 100%;
   font-size: 1.6rem;
   text-align: center;
@@ -457,15 +516,21 @@ header {
   padding: 2rem 0;
 }
 
-.cost__table--left-td {
-  padding: 1.9rem 0;
-}
-
-.cost__table--right-td {
+.cost__table--right-td-num {
   font-size: 2.8rem;
   color: #f23397;
   font-weight: bold;
   padding: 1.2rem 0;
+}
+
+.cost__table--right-td-txt {
+  font-size: 1.6rem;
+  color: #f23397;
+  font-weight: 500;
+}
+
+.cost__table--left-td {
+  padding: 1.9rem 0;
 }
 
 /* お近くの教室を探す・よくあるご質問 */
@@ -499,7 +564,7 @@ header {
 
 .qa-and-classrooms__item {
   position: relative;
-  display: inline-block; /* 要素がインラインブロックとして配置されるように */
+  display: block;
 }
 
 .qa-and-classrooms__text {
@@ -547,9 +612,18 @@ footer {
 
   /* ヘッダー */
   header {
-    width: 100%;
     height: 10.1rem;
+  }
+
+  .header__container {
     padding: 0 2rem;
+  }
+
+  .header__content {
+  }
+
+  .header__image {
+    width: 24.1rem;
   }
 
   .header__title--link {
@@ -557,9 +631,15 @@ footer {
     font-size: 3.2rem;
   }
 
+  .header__link {
+    width: 24.1rem;
+  }
+
   /* PCメニュー表示 */
   .pc-nav {
-    display: block;
+    display: flex;
+    padding: 0 0 0 15.8rem;
+    align-items: center;
   }
 
   .pc-nav__ul {
@@ -571,6 +651,10 @@ footer {
     font-size: 2rem;
     line-height: 4.5rem;
     padding: 0 4.8rem 0 0;
+  }
+
+  .pc-nav__link:hover {
+    color: #0056b3;
   }
 
   /* メイン */
@@ -590,17 +674,13 @@ footer {
 
   /* メインビジュアル */
   .cover {
-    position: relative;
     width: 100%;
+    height: 65.1rem;
+    background-image: url("/assets/images/mv_pc.jpg"); /* ここで背景画像を指定 */
+    padding: 10.4rem 0 0 5rem;
   }
 
   .cover__container {
-    height: 65.1rem;
-    background-image: url("/assets/images/mv_sp.jpg"); /* ここで背景画像を指定 */
-    background-size: cover; /* 背景画像が要素全体をカバーするように調整 */
-    background-repeat: no-repeat; /* 背景画像の繰り返しを防止 */
-    background-position: center center; /* 背景画像を左右中央に配置 */
-    padding: 10.4rem 0 0 5rem;
   }
 
   .cover__content {
@@ -636,14 +716,12 @@ footer {
 
   /* 各種申し込みボタン */
   .action {
-    position: absolute;
-    bottom: -7rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem; /* ボタンの間隔 */
+    bottom: 5rem;
     width: 100%;
-    padding: 0 3rem;
   }
 
   .action__button {
@@ -661,7 +739,6 @@ footer {
 
   /* 選ばれる３つの理由 */
   .reason {
-    margin: 7.2rem 0 0 0;
   }
 
   .reason__title {
@@ -715,10 +792,23 @@ footer {
 
   .application__btn {
     width: 38rem;
+    border-radius: 3.8rem;
+    display: block;
   }
 
   .application__text {
     margin: 0 0 2rem 0;
+  }
+
+  .application__btn-text {
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+
+  .application__btn--nav {
+    width: 28.2rem;
+    height: 100%;
+    padding: 1.6rem 4.1rem;
   }
 
   /* コース・目的 */
@@ -732,6 +822,7 @@ footer {
 
   .choose__content--select {
     margin: 0;
+    gap: 0.6rem;
   }
 
   .choose__content--top {
@@ -746,13 +837,17 @@ footer {
     margin: 0;
   }
 
+  .choose__image--arrow {
+    padding: 0 0.17rem 0 0;
+  }
+
   .image__container {
-    display: inline-block;
+    display: block;
     overflow: hidden; /* 拡大した部分がはみ出さないように */
   }
 
-  .image-zoom-wrapper {
-    overflow: hidden; /* 親要素からはみ出した部分を隠す */
+  .choose__content--select {
+    padding: 1.6rem 0 0 0;
   }
 
   .image-zoom {
@@ -766,8 +861,7 @@ footer {
   }
 
   .cost {
-    padding: 0 30rem;
-    margin: 7.2rem 0;
+    padding: 7.2rem 30rem;
   }
 
   .cost__title {
@@ -791,8 +885,14 @@ footer {
     padding: 1.6rem 0;
   }
 
-  .cost__table--right-td {
+  .cost__table--right-td-num {
     font-size: 3.2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+  }
+
+  .cost__table--right-td-txt {
+    font-size: 1.8rem;
   }
 
   .qa-and-classrooms {
@@ -801,6 +901,17 @@ footer {
 
   .qa-and-classrooms__text {
     font-size: 3.2rem;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+  }
+
+  .qa-and-classrooms__item--qa {
+    width: 100%;
+  }
+
+  .qa-and-classrooms__item--classrooms {
+    width: 100%;
   }
 }
 
