@@ -12,4 +12,8 @@ $(document).ready(function () {
         $('.choose__content').removeClass('choose__content--active')
         $('#content-' + tabId).addClass('choose__content--active');
     });
+
+    $('.sp-nav__item').click(() => {
+        $('.sp-nav').removeClass('active');
+    })
 });

@@ -6,6 +6,7 @@
 
 html {
   font-size: calc(10 * 100vw / 375); /* 390はSPデザインカンプの幅 */
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -188,7 +189,6 @@ header {
 
 .cover__achievement-title {
   font-size: 1.1rem;
-  height: 1.1rem;
 }
 
 .cover__achievement-number {
@@ -197,6 +197,8 @@ header {
   font-style: italic; /* Italic */
   font-size: 2.5rem;
   color: #f11f8d;
+  line-height: 1;
+  margin: 0.6rem 1rem 0 0;
 }
 
 .cover__achievement-number--one {
@@ -223,6 +225,7 @@ header {
   font-size: 2.5rem;
   color: #005bac;
   font-weight: 900; /* Heavyウェイト */
+  line-height: 1.31;
 }
 
 .cover__picture--image {
@@ -256,11 +259,6 @@ header {
   transition: opacity 0.2s ease;
 }
 
-/* ホバー時に光るエフェクトを遅延させる */
-.action__button:hover {
-  transition-delay: 0.2s; /* 光るエフェクトの遅延時間 */
-}
-
 .action__button--contact {
   background-color: #77cb33;
 }
@@ -277,7 +275,7 @@ header {
 /* 入会申し込みエリア */
 .application {
   background-color: rgb(255, 85, 85, 10%);
-  padding: 4rem 3.5rem;
+  padding: 3.8rem 3.5rem 3.9rem;
 }
 
 .application__container {
@@ -289,7 +287,7 @@ header {
 
 .application__text {
   font-size: 1.6rem;
-  margin: 0 0 1.2rem 0;
+  padding: 0 7px 0.9rem;
 }
 
 .application__btn-text {
@@ -300,16 +298,18 @@ header {
 .application__btn {
   color: #ffffff;
   background: linear-gradient(to right, rgb(2, 113, 224), rgb(50, 150, 250));
-  height: 100%;
-  width: 100%;
-  padding: 2rem 5.3rem 2rem 5.2rem;
+  width: 30.5rem;
+  height: 6.9rem;
   border-radius: 3.5rem;
   text-align: center;
+  line-height: 6.9rem;
 }
 
 .application__btn--nav {
-  width: 28.2rem;
+  width: 28.5rem;
   height: 6.1rem;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .application__btn:hover {
@@ -317,29 +317,26 @@ header {
   transition: opacity 0.3s ease;
 }
 
-.application__btn--nav {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
 /* 選ばれる３つの理由 */
 .reason {
-  padding: 1.6rem;
+  padding-top: 1.3rem;
 }
 
 .reason__container {
   max-width: 1200px;
   margin-inline: auto;
+  padding: 0 1.6rem;
 }
 
 .reason__title {
   font-size: 2.8rem;
   text-align: center;
-  margin: 0 0 1.7rem 0;
+  padding: 0 0 1.5rem 0;
 }
 
 .reason__content-heading {
   font-size: 2rem;
+  line-height: 1.7;
 }
 
 .reason--three-txt {
@@ -349,15 +346,15 @@ header {
 }
 
 .reason__content {
-  margin: 0 0 3.6rem 0;
+  padding: 0 0 3.3rem 0;
 }
 
 .reason__content-body {
   font-size: 1.6rem;
+  padding: 0.6rem 0 0;
 }
 
 .reason__image {
-  margin: 0 0 0.8rem 0;
   width: 100%;
 }
 
@@ -371,6 +368,11 @@ header {
   font-style: italic; /* Italic */
   font-size: 2.4rem;
   color: #f11f8d;
+  height: 5.5rem;
+}
+
+.reason__content--txt-second {
+  line-height: 2;
 }
 
 .reason__content--txt-highlight {
@@ -379,17 +381,17 @@ header {
 
 /* コース・目的エリア  */
 .choose {
-  margin: 0 0 6.3rem 0;
+  padding: 6.4rem 0 6.27rem 0;
 }
 
 .choose__title {
   text-align: center;
   font-size: 2.8rem;
-  margin: 6.4rem 0 2.1rem 0;
+  padding: 0rem 0px 1.1rem 1.7rem;
 }
+
 .choose__container {
   width: 100%;
-  padding: 1.6rem 0;
   max-width: 1200px;
   margin-inline: auto;
 }
@@ -401,7 +403,7 @@ header {
 
 .choose__content {
   background: #f2f9ff;
-  padding: 2.8rem 1.6rem;
+  padding: 2.6rem 1.6rem;
   display: none;
 }
 
@@ -443,7 +445,8 @@ header {
 }
 
 .choose__image--arrow {
-  padding: 0 0.81rem 0 0;
+  width: 1.38rem;
+  height: 1.184rem;
 }
 
 .choose__content--active {
@@ -452,7 +455,7 @@ header {
 
 .choose__content--select {
   display: flex;
-  margin: 1.2rem 0 2.8rem 0;
+  padding: 0.7rem 0 2.7rem 0;
   align-items: center;
 }
 
@@ -465,10 +468,8 @@ header {
 .choose__txt {
   font-size: 2rem;
   font-weight: bold;
-}
-
-.choose__content--select {
-  padding: 1.2rem 0 0 0;
+  padding-left: 0.82rem;
+  white-space: nowrap;
 }
 
 .choose__link:hover {
@@ -477,18 +478,18 @@ header {
 
 /* 費用エリアのスタイル */
 .cost {
-  padding: 6.4rem 1.6rem;
+  padding: 6.4rem 1.7rem;
 }
 
 .cost__container {
-  max-width: 1200px;
+  max-width: 600px;
   margin-inline: auto;
 }
 
 .cost__title {
   font-size: 2.8rem;
   text-align: center;
-  margin: 0 0 2.3rem 0;
+  padding: 0 0 1.5rem 1.6rem;
 }
 
 .cost__table {
@@ -509,16 +510,18 @@ header {
 }
 
 .cost__table--head-left {
-  padding: 2rem 0;
+  padding: 1.8rem 1rem 1.7rem 0.8rem;
 }
 
 .cost__table--head-right {
-  padding: 2rem 0;
+  padding: 2rem 1.1rem 1.6rem 0;
+  width: 22.4rem;
 }
 
 .cost__table--right-td-num {
   font-size: 2.8rem;
   color: #f23397;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
   padding: 1.2rem 0;
 }
@@ -530,7 +533,7 @@ header {
 }
 
 .cost__table--left-td {
-  padding: 1.9rem 0;
+  padding: 1.73rem 0;
 }
 
 /* お近くの教室を探す・よくあるご質問 */
@@ -548,7 +551,6 @@ header {
   width: 100%; /* 幅を親要素の幅に合わせる */
   height: 100%; /* 高さを親要素の高さに合わせる */
   object-fit: cover; /* 画像が親要素の領域に収まるように拡大・縮小し、余白をなくす */
-  display: block; /* インライン要素の余白をなくす */
 }
 
 .qa-and-classrooms__link:hover {
@@ -564,13 +566,13 @@ header {
 
 .qa-and-classrooms__item {
   position: relative;
-  display: block;
+  height: 17rem;
 }
 
 .qa-and-classrooms__text {
   position: absolute;
-  top: 40%;
-  left: 0.8rem;
+  top: 38.6%;
+  left: 1.5rem;
   font-size: 2.2rem; /* テキストサイズの調整 */
   color: white; /* テキストカラー */
   font-weight: bold; /* テキストを太字に */
@@ -584,6 +586,11 @@ footer {
   font-size: 1.3rem;
   justify-content: center;
   align-items: center;
+}
+.footer__txt {
+  width: 100%;
+  padding: 0 0 0 3.1rem;
+  font-family: "Poppins", sans-serif;
 }
 
 .application--last {
@@ -632,7 +639,7 @@ footer {
   }
 
   .header__link {
-    width: 24.1rem;
+    width: 23.4rem;
   }
 
   /* PCメニュー表示 */
@@ -649,7 +656,7 @@ footer {
 
   .pc-nav__link {
     font-size: 2rem;
-    line-height: 4.5rem;
+    line-height: 2.3rem;
     padding: 0 4.8rem 0 0;
   }
 
@@ -677,7 +684,7 @@ footer {
     width: 100%;
     height: 65.1rem;
     background-image: url("/assets/images/mv_pc.jpg"); /* ここで背景画像を指定 */
-    padding: 10.4rem 0 0 5rem;
+    padding: 10.4rem 0 0 4.6rem;
   }
 
   .cover__container {
@@ -696,10 +703,12 @@ footer {
 
   .cover__achievement-title {
     font-size: 2rem;
+    line-height: 2.3;
   }
 
   .cover__achievement-number {
     font-size: 5.4rem;
+    margin: 0.8rem -0.3rem 0 0;
   }
 
   .cover__achievement-number--one {
@@ -708,10 +717,12 @@ footer {
 
   .cover__announcement-title {
     font-size: 3.3rem;
+    line-height: 1.4;
   }
 
   .cover__announcement-text {
     font-size: 6rem;
+    line-height: 1.53;
   }
 
   /* 各種申し込みボタン */
@@ -719,8 +730,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem; /* ボタンの間隔 */
-    bottom: 5rem;
+    margin-top: -5rem;
     width: 100%;
   }
 
@@ -739,42 +749,65 @@ footer {
 
   /* 選ばれる３つの理由 */
   .reason {
+    padding: 4.6rem 1.7rem 7rem;
   }
 
   .reason__title {
     font-size: 3.6rem;
+    padding-bottom: 2.7rem;
+  }
+
+  .reason__content-heading {
+    font-size: 2.4rem;
   }
 
   .reason--three-txt {
     font-size: 5.4rem;
   }
 
+  .reason__container {
+    padding: 0 1.2rem 0 0;
+  }
+
   .reason__content {
     display: flex;
+    justify-content: space-between;
+  }
+
+  .reason__content--point3 {
+    padding: 1.8rem 0 0 0rem;
+  }
+
+  .reason__content--txt-highlight {
+    padding: 0 0 0 1rem;
+  }
+
+  .reason__content-body {
+    padding: 1.5rem 0 0 0;
   }
 
   .reason__content--point2 {
     flex-direction: row-reverse; /* 順番を逆にする */
   }
 
-  .reason__image-wrapper-point2 {
-    padding: 0 0 0 2rem;
+  .reason__content--txt-second {
+    line-height: 2.7;
   }
 
-  .reason__text-point2 {
-    padding: 0 2rem 0 0;
+  .reason__content-heading-second {
+    padding: 2.1rem 0 0 0;
+  }
+
+  .reason__image-second {
+    padding: 2rem 0 0 0;
   }
 
   .reason__media {
-    width: 58rem;
+    width: 48%;
   }
 
   .reason__image-wrapper {
     padding: 0 2rem 0 0;
-  }
-
-  .reason__text {
-    padding: 0 0 0 2rem;
   }
 
   .reason__image-text {
@@ -790,14 +823,18 @@ footer {
     padding: 5.6rem 0;
   }
 
-  .application__btn {
-    width: 38rem;
-    border-radius: 3.8rem;
-    display: block;
+  .application__text {
+    padding: 0.3rem 7rem 1.8rem 6.2rem;
   }
 
-  .application__text {
-    margin: 0 0 2rem 0;
+  .application__btn {
+    width: 35.9rem;
+    height: 7.5rem;
+    line-height: 7.5rem;
+    border-radius: 3.8rem;
+    display: block;
+    margin: 0px 0.6rem 0 0rem;
+    padding: 0 0 0 1.9rem;
   }
 
   .application__btn-text {
@@ -807,28 +844,51 @@ footer {
 
   .application__btn--nav {
     width: 28.2rem;
-    height: 100%;
-    padding: 1.6rem 4.1rem;
+    height: 6.1rem;
+    line-height: 6.1rem;
   }
 
   /* コース・目的 */
+  .choose {
+    padding: 6.2rem 2.5rem 9.5rem 1.7rem;
+  }
+
+  .choose__title {
+    padding: 0.7rem 0 2.3rem 0;
+    font-size: 3.6rem;
+  }
+
   .choose__tabs {
     padding: 0;
   }
 
+  .choose__tab {
+    font-size: 2.4rem;
+    padding: 1.7rem 0.2rem 0 0rem;
+  }
+
+  .choose__content {
+    border-radius: 0 0 1.2rem 1.2rem;
+    padding: 4.9rem 0 0rem 1.6rem;
+  }
+
   .choose__content--image-select {
-    padding: 0 1.6rem;
+    padding: 0 1.5rem 0 0;
+  }
+
+  .choose__tab--by-grade-level {
+    margin: 0 3.8rem 0 0;
   }
 
   .choose__content--select {
     margin: 0;
-    gap: 0.6rem;
+    padding: 1.4rem 0 0 0;
   }
 
   .choose__content--top {
     display: flex;
     justify-content: space-evenly;
-    margin: 0 0 4rem 0;
+    margin: 0 0 3.6rem 0;
   }
 
   .choose__content--bottom {
@@ -838,16 +898,17 @@ footer {
   }
 
   .choose__image--arrow {
-    padding: 0 0.17rem 0 0;
+    width: 1.731rem;
+    height: 1.41rem;
+  }
+
+  .choose__txt {
+    padding-left: 1.17rem;
   }
 
   .image__container {
     display: block;
     overflow: hidden; /* 拡大した部分がはみ出さないように */
-  }
-
-  .choose__content--select {
-    padding: 1.6rem 0 0 0;
   }
 
   .image-zoom {
@@ -861,42 +922,49 @@ footer {
   }
 
   .cost {
-    padding: 7.2rem 30rem;
+    padding: 6.7rem 30.4rem 6.9rem 29.7rem;
   }
 
   .cost__title {
     font-size: 3.6rem;
-    margin: 0 0 3.2rem 0;
+    padding: 0 0 2.6rem 0;
   }
 
   .cost__table {
     font-size: 1.8rem;
   }
 
+  .cost__table--head {
+  }
+
   .cost__table--head-left {
-    padding: 2rem 0;
+    padding: 2.1rem 0;
+    width: 7rem;
   }
 
   .cost__table--head-right {
-    padding: 2.4rem 0;
+    padding: 0.2rem 0 0 0;
   }
 
   .cost__table--left-td {
-    padding: 1.6rem 0;
+    padding: 2.3rem 0;
   }
 
   .cost__table--right-td-num {
     font-size: 3.2rem;
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
   }
 
   .cost__table--right-td-txt {
     font-size: 1.8rem;
   }
 
+  .cost__table--left-td-last {
+    padding: 2.1rem 0;
+  }
+
   .qa-and-classrooms {
     display: flex;
+    height: 32rem;
   }
 
   .qa-and-classrooms__text {
@@ -906,12 +974,31 @@ footer {
     left: 30%;
   }
 
+  .qa-and-classrooms__image {
+    height: 100%;
+  }
+
   .qa-and-classrooms__item--qa {
     width: 100%;
+    height: 100%;
   }
 
   .qa-and-classrooms__item--classrooms {
     width: 100%;
+    height: 100%;
+  }
+
+  .qa__text {
+    left: 0.6%;
+  }
+
+  .classrooms__text {
+    left: 51.6%;
+  }
+
+  footer {
+    text-align: center;
+    padding: 3rem 4.1rem 0 0;
   }
 }
 
