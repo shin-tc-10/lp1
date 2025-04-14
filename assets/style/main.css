@@ -645,8 +645,8 @@ footer {
   /* PCメニュー表示 */
   .pc-nav {
     display: flex;
-    padding: 0 0 0 15.8rem;
     align-items: center;
+    margin-left: auto;
   }
 
   .pc-nav__ul {
@@ -834,7 +834,6 @@ footer {
     border-radius: 3.8rem;
     display: block;
     margin: 0px 0.6rem 0 0rem;
-    padding: 0 0 0 1.9rem;
   }
 
   .application__btn-text {
@@ -971,7 +970,7 @@ footer {
     font-size: 3.2rem;
     position: absolute;
     top: 40%;
-    left: 30%;
+    left: 29%;
   }
 
   .qa-and-classrooms__image {
@@ -986,14 +985,6 @@ footer {
   .qa-and-classrooms__item--classrooms {
     width: 100%;
     height: 100%;
-  }
-
-  .qa__text {
-    left: 0.6%;
-  }
-
-  .classrooms__text {
-    left: 51.6%;
   }
 
   footer {
