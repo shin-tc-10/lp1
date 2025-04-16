@@ -867,11 +867,11 @@ footer {
 
   .choose__content {
     border-radius: 0 0 1.2rem 1.2rem;
-    padding: 4.9rem 0 1.6rem 0;
+    padding: 4.9rem 1.5rem 1.6rem;
   }
 
   .choose__content--image-select {
-    padding: 0 1.5rem 0 0;
+    padding: 0 1.5rem 0;
   }
 
   .choose__tab--by-grade-level {
