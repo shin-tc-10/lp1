@@ -863,12 +863,11 @@ footer {
 
   .choose__tab {
     font-size: 2.4rem;
-    padding: 1.7rem 0.2rem 0 0rem;
   }
 
   .choose__content {
     border-radius: 0 0 1.2rem 1.2rem;
-    padding: 4.9rem 0 0rem 1.6rem;
+    padding: 4.9rem 0 1.6rem 0;
   }
 
   .choose__content--image-select {
@@ -969,8 +968,9 @@ footer {
   .qa-and-classrooms__text {
     font-size: 3.2rem;
     position: absolute;
-    top: 40%;
-    left: 29%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .qa-and-classrooms__image {
