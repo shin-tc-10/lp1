@@ -2,48 +2,51 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="難関大学の合格実績No.1のKira-Kira Jukuが、現役高校生・高卒生向け入学説明会の申し込みを開始しました。" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="難関大学の合格実績No.1のKira-Kira Jukuが、現役高校生・高卒生向け入学説明会の申し込みを開始しました。">
 
     <!-- OGP設定 -->
-    <meta property="og:title" content="入学説明会のお申し込み開始 | Kira-Kira Juku" />
-    <meta property="og:description" content="難関大学の合格実績No.1のKira-Kira Jukuが、現役高校生・高卒生向け入学説明会の申し込みを開始しました。" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="/lp1/index.html" />
-    <meta property="og:images" content="/assets/images/mv_ogp_01.jpg" />
-    <meta property="og:site_name" content="Kira-Kira Juku" />
-    <link rel="stylesheet" href="/assets/style/main.css" />
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <!-- Noto Sans JP フォント -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
+    <meta property="og:title" content="入学説明会のお申し込み開始 | Kira-Kira Juku">
+    <meta property="og:description" content="難関大学の合格実績No.1のKira-Kira Jukuが、現役高校生・高卒生向け入学説明会の申し込みを開始しました。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:image" content="https://example.com/asssets/images/mv_ogp.jpg">
+    <meta property="og:site_name" content="Kira-Kira Juku">
 
-    <!-- Poppins フォント -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/assets/style/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="/assets/script/main.js"></script>
+    <!-- Google Fontsの読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
     <title>入学説明会のお申し込み開始 | Kira-Kira Juku</title>
 </head>
 
 <body>
+    <!-- ヘッダー -->
     <header class="header">
         <div class="header__container">
             <div class="header__content">
-                <a class="header__link" href="/">
-                    <img class="header__image" src="/assets/images/header_title_sp.svg">
+                <a class="header__link" href="#">
+                    <img class="header__image" src="/assets/image/header_title_sp.svg" alt="Kira-Kira Juku">
                 </a>
+                <!-- PCメニュー -->
                 <nav class="pc-nav">
                     <ul class="pc-nav__ul">
                         <li><a class="pc-nav__link" href="#reason">選ばれる3つの理由</a></li>
                         <li><a class="pc-nav__link" href="#choose">コース・目的</a></li>
                         <li><a class="pc-nav__link" href="#cost">費 用</a></li>
-                        <li>
-                            <a href="/entry" class="application__btn application__btn--nav">
-                                入学説明会に申し込む
-                            </a>
-                        </li>
                     </ul>
+                    <a href="/entry" class="application__btn application__btn--nav">
+                        入学説明会に申し込む
+                    </a>
                 </nav>
                 <div class="hamburger">
                     <span class="hamburger--txt"></span>
@@ -51,23 +54,24 @@
                     <span class="hamburger--txt"></span>
                 </div>
             </div>
+            <!-- スマホメニュー -->
             <nav class="sp-nav">
                 <ul class="sp-nav__list">
                     <li class="sp-nav__item">
                         <a class="sp-nav__link" href="#reason">
-                            <img class="sp-nav__img" src="/assets/images/hamburger_menu_arrow_right_sp.png" alt="" />
+                            <img class="sp-nav__img" src="/assets/image/hamburger_menu_arrow_right_sp.png" alt="" >
                             選ばれる3つの理由
                         </a>
                     </li>
                     <li class="sp-nav__item">
                         <a class="sp-nav__link" href="#choose">
-                            <img class="sp-nav__img" src="/assets/images/hamburger_menu_arrow_right_sp.png" alt="" />
+                            <img class="sp-nav__img" src="/assets/image/hamburger_menu_arrow_right_sp.png" alt="" >
                             コース・目的
                         </a>
                     </li>
                     <li class="sp-nav__item">
                         <a class="sp-nav__link" href="#cost">
-                            <img class="sp-nav__img" src="/assets/images/hamburger_menu_arrow_right_sp.png" alt="" />
+                            <img class="sp-nav__img" src="/assets/image/hamburger_menu_arrow_right_sp.png" alt="" >
                             費 用
                         </a>
                     </li>
@@ -78,45 +82,48 @@
             </nav>
         </div>
     </header>
+    <!-- メイン -->
     <main class="main">
+        <!-- メインビジュアル -->
         <section class="cover">
             <div class="cover__container">
-                <div class="cover__content">
                     <div class="cover__info">
-                        <img class="cover__arrow-icon imag" src="/assets/images/mv_frame_left_sp.png" alt="" />
+                        <img class="cover__arrow-icon imag" src="/assets/image/mv_frame_left_sp.svg" alt="" >
                         <div class="cover__achievements">
                             <p class="cover__achievement-title">難関大学の合格実績</p>
                             <p class="cover__achievement-number">No.<span
                                     class="cover__achievement-number--one">1</span></p>
                         </div>
-                        <img class="cover__arrow-icon" src="/assets/images/mv_frame_right_sp.png" alt="" />
+                        <img class="cover__arrow-icon" src="/assets/image/mv_frame_right_sp.svg" alt="" >
                     </div>
-                    <div class="cover__announcement">
-                        <p class="cover__announcement-title">現役高校生・高卒生</p>
-                        <p class="cover__announcement-text">入学説明会の<br>お申し込み開始</p>
-                    </div>
-                </div>
+                    <h1 class="cover__announcement">
+                        <span class="cover__announcement-title">現役高校生・高卒生</span><span class="cover__announcement-text">入学説明会の<br>お申し込み開始</span>
+                    </h1>
             </div>
         </section>
+        <!-- 各種申し込みエリア -->
         <div class="action">
-            <div class="action__content">
-                <a href="/inquiry" class="action__button action__button--contact">入学のお問い合わせ</a>
-            </div>
-            <div class="action__content--application">
-                <a href="/freetrial" class="action__button action__button--application"> 無料体験に申し込む</a>
-            </div>
-            <div class="action__content">
-                <a href="/request" class="action__button action__button--request">資料請求する</a>
-            </div>
+            <ul class="action__list">
+                <li class="action__item">
+                    <a href="/inquiry" class="action__button action__button--green">入学のお問い合わせ</a>
+                </li>
+                <li class="action__item--application">
+                    <a href="/freetrial" class="action__button action__button--orange"> 無料体験に申し込む</a>
+                </li>
+                <li class="action__item">
+                    <a href="/request" class="action__button action__button--light-turquoise">資料請求する</a>
+                </li>
+            </ul>
         </div>
+        <!-- 選ばれる3つの理由エリア -->
         <section class="reason" id="reason">
             <div class="reason__container">
                 <h2 class="reason__title">選ばれる<span class="reason--three-txt">3</span>つの理由</h2>
                 <div class="reason__content--point1 reason__content">
                     <div class="reason__media reason__image_wrapper">
                         <picture>
-                            <source media="(min-width: 768px)" srcset="/assets/images/reason_01_pc.jpg" />
-                            <img class="reason__image" src="/assets/images/three_reason_point_1_01.jpg" alt="" />
+                            <source media="(min-width: 768px)" srcset="/assets/image/reason_01_pc.jpg" >
+                            <img class="reason__image" src="/assets/image/three_reason_point_1_01.jpg" alt="" >
                         </picture>
                     </div>
                     <div class="reason__media reason__text">
@@ -134,9 +141,9 @@
                 <div class="reason__content--point2 reason__content">
                     <div class="reason__media reason__image_wrapper reason__image-wrapper-point2">
                         <picture>
-                            <source media="(min-width: 768px)" srcset="/assets/images/reason_02_pc.jpg" />
+                            <source media="(min-width: 768px)" srcset="/assets/image/reason_02_pc.jpg" >
                             <img class="reason__image reason__image-second"
-                                src="/assets/images/three_reason_point_2_01.jpg" alt="" />
+                                src="/assets/image/three_reason_point_2_01.jpg" alt="" >
                         </picture>
                     </div>
                     <div class="reason__media reason__text reason__text-point2">
@@ -157,8 +164,8 @@
 
                     <div class="reason__media reason__image_wrapper">
                         <picture>
-                            <source media="(min-width: 768px)" srcset="/assets/images/reason_03_pc.jpg" />
-                            <img class="reason__image" src="/assets/images/three_reason_point_3_01.jpg" alt="" />
+                            <source media="(min-width: 768px)" srcset="/assets/image/reason_03_pc.jpg" >
+                            <img class="reason__image" src="/assets/image/three_reason_point_3_01.jpg" alt="" >
                         </picture>
                     </div>
                     <div class="reason__media reason__text">
@@ -177,6 +184,7 @@
                 </div>
             </div>
         </section>
+        <!-- 入会申し込みエリア -->
         <div class="application">
             <div class="application__container">
                 <p class="application__text">入学ご検討の方は、まずは入学説明会にお越しください</p>
@@ -185,6 +193,7 @@
                 </a>
             </div>
         </div>
+        <!-- コース・目的エリア -->
         <section class="choose" id="choose">
             <div class="choose__container">
                 <h2 class="choose__title">コース・目的</h2>
@@ -200,38 +209,37 @@
                     <div class="choose__content--top">
                         <div class="choose__content--image-select">
                             <div class="image__container image-zoom-wrapper">
-                                <a href="/" class="choose__link">
+                                <a href="#" class="choose__link">
                                     <picture>
-                                        <source media="(min-width: 768px)" srcset="/assets/images/cource_01_pc.jpg"
-                                            class="image--zoom" />
-                                        <img class="cource__image image-zoom" src="/assets/images/cource_01_sp.jpg"
-                                            alt="" />
+                                        <source media="(min-width: 768px)" srcset="/assets/image/cource_01_pc.jpg"
+                                            class="image--zoom" >
+                                        <img class="cource__image image-zoom" src="/assets/image/cource_01_sp.jpg"
+                                            alt="" >
                                     </picture>
                                 </a>
                             </div>
                             <div class="choose__content--select">
-                                <img src="/assets/images/choose_arrow_right_01_sp.png" alt=""
-                                    class="choose__image--arrow" />
-                                <a href="/" class="choose__link">
+                                <img src="/assets/image/choose_arrow_right_sp.png" alt=""
+                                    class="choose__image--arrow" >
+                                <a href="#" class="choose__link">
                                     <p class="choose__txt">高卒生</p>
                                 </a>
                             </div>
                         </div>
                         <div class="choose__content--image-select">
                             <div class="image__container image-zoom-wrapper">
-                                <a href="/" class="choose__link">
+                                <a href="#" class="choose__link">
                                     <picture>
                                         <source class="image--zoom" media="(min-width: 768px)"
-                                            srcset="/assets/images/cource_02_pc.jpg" />
-                                        <img class="cource__image image-zoom" src="/assets/images/cource_02_sp.jpg"
-                                            alt="" />
+                                            srcset="/assets/image/cource_02_pc.jpg" >
+                                        <img class="cource__image image-zoom" src="/assets/image/cource_02_sp.jpg"
+                                            alt="" >
                                     </picture>
                                 </a>
                             </div>
                             <div class="choose__content--select">
-                                <img src="/assets/images/choose_arrow_right_01_sp.png" alt=""
-                                    class="choose__image--arrow" />
-                                <a href="/" class="choose__link">
+                                <img src="/assets/image/choose_arrow_right_sp.png" alt="" class="choose__image--arrow" >
+                                <a href="#" class="choose__link">
                                     <p class="choose__txt">高校3年生</p>
                                 </a>
                             </div>
@@ -240,39 +248,37 @@
                     <div class="choose__content--bottom">
                         <div class="choose__content--image-select">
                             <div class="image__container image-zoom-wrapper">
-                                <a href="/" class="choose__link">
+                                <a href="#" class="choose__link">
 
                                     <picture>
                                         <source class="image--zoom" media="(min-width: 768px)"
-                                            srcset="/assets/images/cource_03_pc.jpg" />
-                                        <img class="cource__image image-zoom" src="/assets/images/cource_03_sp.jpg"
-                                            alt="" />
+                                            srcset="/assets/image/cource_03_pc.jpg" >
+                                        <img class="cource__image image-zoom" src="/assets/image/cource_03_sp.jpg"
+                                            alt="" >
                                     </picture>
                                 </a>
                             </div>
                             <div class="choose__content--select">
-                                <img src="/assets/images/choose_arrow_right_01_sp.png" alt=""
-                                    class="choose__image--arrow" />
-                                <a href="/" class="choose__link">
+                                <img src="/assets/image/choose_arrow_right_sp.png" alt="" class="choose__image--arrow">
+                                <a href="#" class="choose__link">
                                     <p class="choose__txt">高校2年生</p>
                                 </a>
                             </div>
                         </div>
                         <div class="choose__content--image-select">
                             <div class="image__container image-zoom-wrapper">
-                                <a href="/" class="choose__link">
+                                <a href="#" class="choose__link">
                                     <picture>
                                         <source class="image--zoom" media="(min-width: 768px)"
-                                            srcset="/assets/images/cource_04_pc.jpg" />
-                                        <img class="cource__image image-zoom" src="/assets/images/cource_04_sp.jpg"
-                                            alt="" />
+                                            srcset="/assets/image/cource_04_pc.jpg" >
+                                        <img class="cource__image image-zoom" src="/assets/image/cource_04_sp.jpg"
+                                            alt="" >
                                     </picture>
                                 </a>
                             </div>
                             <div class="choose__content--select">
-                                <img src="/assets/images/choose_arrow_right_01_sp.png" alt=""
-                                    class="choose__image--arrow" />
-                                <a href="/" class="choose__link">
+                                <img src="/assets/image/choose_arrow_right_sp.png" alt="" class="choose__image--arrow">
+                                <a href="#" class="choose__link">
                                     <p class="choose__txt">高校1年生</p>
                                 </a>
                             </div>
@@ -283,38 +289,38 @@
                     <div class="choose__content--top">
                         <div class="choose__content--image-select">
                             <div class="image__container image-zoom-wrapper">
-                                <a href="/" class="choose__link">
+                                <a href="#" class="choose__link">
                                     <picture>
                                         <source media="(min-width: 768px)"
-                                            srcset="/assets/images/by_purpose_01_pc.jpg" />
-                                        <img class="cource__image image-zoom" src="/assets/images/by_purpose_01_sp.jpg"
-                                            alt="" />
+                                            srcset="/assets/image/by_purpose_01_pc.jpg" >
+                                        <img class="cource__image image-zoom" src="/assets/image/by_purpose_01_sp.jpg"
+                                            alt="" >
                                     </picture>
                                 </a>
                             </div>
                             <div class="choose__content--select">
-                                <img src="/assets/images/choose_arrow_right_01_sp.png" alt=""
-                                    class="choose__image--arrow" />
-                                <a href="/" class="choose__link">
+                                <img src="/assets/image/choose_arrow_right_sp.png" alt=""
+                                    class="choose__image--arrow" >
+                                <a href="#" class="choose__link">
                                     <p class="choose__txt">難関大学・医学部合格を目指す</p>
                                 </a>
                             </div>
                         </div>
                         <div class="choose__content--image-select">
                             <div class="image__container image-zoom-wrapper">
-                                <a href="/" class="choose__link">
+                                <a href="#" class="choose__link">
                                     <picture>
-                                        <source media="(min-width: 768px)" srcset="/assets/images/by_purpose_02_pc.jpg"
-                                            class="image--zoom" />
-                                        <img class="cource__image image-zoom" src="/assets/images/by_purpose_02_sp.jpg"
-                                            alt="" />
+                                        <source media="(min-width: 768px)" srcset="/assets/image/by_purpose_02_pc.jpg"
+                                            class="image--zoom" >
+                                        <img class="cource__image image-zoom" src="/assets/image/by_purpose_02_sp.jpg"
+                                            alt="" >
                                     </picture>
                                 </a>
                             </div>
                             <div class="choose__content--select">
-                                <img src="/assets/images/choose_arrow_right_01_sp.png" alt=""
-                                    class="choose__image--arrow" />
-                                <a href="/" class="choose__link">
+                                <img src="/assets/image/choose_arrow_right_sp.png" alt=""
+                                    class="choose__image--arrow" >
+                                <a href="#" class="choose__link">
                                     <p class="choose__txt">名門私立大学合格を目指す</p>
                                 </a>
                             </div>
@@ -323,38 +329,37 @@
                     <div class="choose__content--bottom">
                         <div class="choose__content--image-select">
                             <div class="image__container image-zoom-wrapper">
-                                <a href="/" class="choose__link">
+                                <a href="#" class="choose__link">
                                     <picture>
-                                        <source media="(min-width: 768px)" srcset="/assets/images/by_purpose_03_pc.jpg"
-                                            class="image--zoom" />
-                                        <img class="cource__image image-zoom" src="/assets/images/by_purpose_03_sp.jpg"
-                                            alt="" />
+                                        <source media="(min-width: 768px)" srcset="/assets/image/by_purpose_03_pc.jpg"
+                                            class="image--zoom" >
+                                        <img class="cource__image image-zoom" src="/assets/image/by_purpose_03_sp.jpg"
+                                            alt="" >
                                     </picture>
                                 </a>
                             </div>
                             <div class="choose__content--select">
-                                <img src="/assets/images/choose_arrow_right_01_sp.png" alt=""
-                                    class="choose__image--arrow" />
-                                <a href="/" class="choose__link">
+                                <img src="/assets/image/choose_arrow_right_sp.png" alt=""
+                                    class="choose__image--arrow" >
+                                <a href="#" class="choose__link">
                                     <p class="choose__txt">国公立大学合格を目指す</p>
                                 </a>
                             </div>
                         </div>
                         <div class="choose__content--image-select">
                             <div class="image__container image-zoom-wrapper">
-                                <a href="/" class="choose__link">
+                                <a href="#" class="choose__link">
                                     <picture>
-                                        <source media="(min-width: 768px)" srcset="/assets/images/by_purpose_04_pc.jpg"
-                                            class="image--zoom" />
-                                        <img class="cource__image image-zoom" src="/assets/images/by_purpose_04_sp.jpg"
-                                            alt="" />
+                                        <source media="(min-width: 768px)" srcset="/assets/image/by_purpose_04_pc.jpg"
+                                            class="image--zoom" >
+                                        <img class="cource__image image-zoom" src="/assets/image/by_purpose_04_sp.jpg"
+                                            alt="" >
                                     </picture>
                                 </a>
                             </div>
                             <div class="choose__content--select">
-                                <img src="/assets/images/choose_arrow_right_01_sp.png" class="choose__" alt=""
-                                    class="choose__image--arrow" />
-                                <a href="/" class="choose__link">
+                                <img src="/assets/image/choose_arrow_right_sp.png" class="choose__image--arrow" alt="">
+                                <a href="#" class="choose__link">
                                     <p class="choose__txt">海外の大学合格を目指す</p>
                                 </a>
                             </div>
@@ -363,6 +368,7 @@
                 </div>
             </div>
         </section>
+        <!-- 入会申し込みエリア -->
         <div class="application">
             <div class="application__container">
                 <p class="application__text">入学ご検討の方は、まずは入学説明会にお越しください</p>
@@ -371,59 +377,55 @@
                 </a>
             </div>
         </div>
+        <!-- 費用エリア -->
         <section class="cost" id="cost">
             <div class="cost__container">
+                <h2 class="cost__title">費 用</h2>
                 <table class="cost__table">
-                    <h2 class="cost__title">費 用</h2>
                     <tr>
                         <td class="cost__table--head cost__table--head-left">年間講数</td>
                         <td class="cost__table--head cost__table--head-right">年間授業料（税込み）</td>
                     </tr>
                     <tr>
-                        <td class="cost__table--left-td">5講</td>
-                        <td>
-                            <span class="cost__table--right-td-num">24,500</span>
-                            <span class="cost__table--right-td-txt">円</span>
+                        <td class="cost__table--left-td cost__td">5講</td>
+                        <td class="cost__table--right-td cost__td">
+                            <span class="cost__table--right-td-num">24,500</span><span class="cost__table--right-td-txt">円</span>
                         </td>
                     </tr>
                     <tr>
-                        <td class="cost__table--left-td">10講</td>
-                        <td>
-                            <span class="cost__table--right-td-num">49,000</span>
-                            <span class="cost__table--right-td-txt">円</span>
+                        <td class="cost__table--left-td cost__td">10講</td>
+                        <td class="cost__table--right-td cost__td">
+                            <span class="cost__table--right-td-num">49,000</span><span class="cost__table--right-td-txt">円</span>
                         </td>
                     </tr>
                     <tr>
-                        <td class="cost__table--left-td">11講</td>
-                        <td>
-                            <span class="cost__table--right-td-num">53,900</span>
-                            <span class="cost__table--right-td-txt">円</span>
+                        <td class="cost__table--left-td cost__td">11講</td>
+                        <td class="cost__table--right-td cost__td">
+                            <span class="cost__table--right-td-num">53,900</span><span class="cost__table--right-td-txt">円</span>
                         </td>
                     </tr>
                     <tr>
-                        <td class="cost__table--left-td">12講</td>
-                        <td>
-                            <span class="cost__table--right-td-num">58,800</span>
-                            <span class="cost__table--right-td-txt">円</span>
+                        <td class="cost__table--left-td cost__td">12講</td>
+                        <td class="cost__table--right-td cost__td">
+                            <span class="cost__table--right-td-num">58,800</span><span class="cost__table--right-td-txt">円</span>
                         </td>
                     </tr>
                     <tr>
-                        <td class="cost__table--left-td">22講</td>
-                        <td>
-                            <span class="cost__table--right-td-num">107,800</span>
-                            <span class="cost__table--right-td-txt">円</span>
+                        <td class="cost__table--left-td cost__td">22講</td>
+                        <td class="cost__table--right-td cost__td">
+                            <span class="cost__table--right-td-num">107,800</span><span class="cost__table--right-td-txt">円</span>
                         </td>
                     </tr>
                     <tr>
-                        <td class="cost__table--left-td cost__table--left-td-last">24講</td>
-                        <td>
-                            <span class="cost__table--right-td-num">117,600</span>
-                            <span class="cost__table--right-td-txt">円</span>
+                        <td class="cost__table--left-td cost__table--left-td-last cost__td">24講</td>
+                        <td class="cost__table--right-td cost__td">
+                            <span class="cost__table--right-td-num">117,600</span><span class="cost__table--right-td-txt">円</span>
                         </td>
                     </tr>
                 </table>
             </div>
         </section>
+        <!-- 入会申し込みエリア -->
         <div class="application">
             <div class="application__container">
                 <p class="application__text">入学ご検討の方は、まずは入学説明会にお越しください</p>
@@ -436,9 +438,9 @@
             <div class="qa-and-classrooms__item qa-and-classrooms__item--qa image-zoom-wrapper">
                 <a href="/faq" class="qa-and-classrooms__link">
                     <picture>
-                        <source media="(min-width: 768px)" srcset="/assets/images/qa_pc.jpg"
-                            class="qa-and-classrooms__image image-zoom" />
-                        <img class="qa-and-classrooms__image image-zoom" src="/assets/images/qa_sp.jpg" alt="" />
+                        <source media="(min-width: 768px)" srcset="/assets/image/qa_pc.jpg"
+                            class="qa-and-classrooms__image image-zoom" >
+                        <img class="qa-and-classrooms__image image-zoom" src="/assets/image/qa_sp.jpg" alt="" >
                     </picture>
                     <div class="qa-and-classrooms__text qa__text">よくあるご質問</div>
 
@@ -447,16 +449,16 @@
             <div class="qa-and-classrooms__item qa-and-classrooms__item--classrooms image-zoom-wrapper">
                 <a href="/search" class="qa-and-classrooms__link">
                     <picture>
-                        <source media="(min-width: 768px)" srcset="/assets/images/classrooms_pc.jpg"
-                            class="qa-and-classrooms__image image-zoom" />
-                        <img class="qa-and-classrooms__image image-zoom" src="/assets/images/classrooms_sp.jpg"
-                            alt="" />
+                        <source media="(min-width: 768px)" srcset="/assets/image/classrooms_pc.jpg"
+                            class="qa-and-classrooms__image image-zoom" >
+                        <img class="qa-and-classrooms__image image-zoom" src="/assets/image/classrooms_sp.jpg" alt="" >
                     </picture>
                     <div class="qa-and-classrooms__text classrooms__text">お近くの教室を探す</div>
                 </a>
             </div>
         </div>
     </main>
+    <!-- フッター -->
     <footer>
         <p class="footer__txt"><span>copyright© 2023 Kira-Kira Juku All Rights Reserved.</span></p>
     </footer>
