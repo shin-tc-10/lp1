@@ -477,7 +477,7 @@ header {
 
 @media screen and (min-width: 768px) {
     .application__container {
-        max-width: 90rem;
+        max-width: 77rem;
     }
 }
 
@@ -505,6 +505,15 @@ header {
     }
 }
 
+.application__item {
+}
+
+@media screen and (min-width: 768px) {
+    .application__item {
+        width: 36rem;
+    }
+}
+
 .application__btn {
     color: #ffffff;
     background: linear-gradient(to right, rgb(2, 113, 224), rgb(50, 150, 250));
@@ -523,7 +532,6 @@ header {
         display: block;
         font-size: 2.4rem;
         font-weight: bold;
-        padding-left: 2.2rem;
     }
 }
 
