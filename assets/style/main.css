@@ -471,6 +471,14 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    max-width: 34.3rem;
+    margin-inline: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .application__container {
+        max-width: 90rem;
+    }
 }
 
 .application__text {
@@ -486,36 +494,47 @@ header {
     }
 }
 
-.application__btn-text {
-    font-size: 2rem;
-    font-weight: bold;
+.application__list {
+    width: 100%;
 }
 
 @media screen and (min-width: 768px) {
-    .application__btn-text {
-        font-size: 2.4rem;
-        font-weight: bold;
-        padding-left: 2.2rem;
+    .application__list {
+        display: flex;
+        justify-content: space-between;
     }
 }
 
 .application__btn {
     color: #ffffff;
     background: linear-gradient(to right, rgb(2, 113, 224), rgb(50, 150, 250));
-    width: 30.5rem;
-    height: 6.9rem;
+    display: block;
     border-radius: 3.5rem;
     text-align: center;
     line-height: 6.9rem;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 @media screen and (min-width: 768px) {
     .application__btn {
-        width: 35.9rem;
-        height: 7.5rem;
         line-height: 7.5rem;
         border-radius: 3.8rem;
         display: block;
+        font-size: 2.4rem;
+        font-weight: bold;
+        padding-left: 2.2rem;
+    }
+}
+
+.application__btn--orange {
+    background: #f6aa00;
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .application__btn {
+        margin-top: 0;
     }
 }
 
